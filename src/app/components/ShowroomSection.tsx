@@ -1,159 +1,121 @@
 'use client';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
+import Link from 'next/link';
 import AppImage from '@/components/ui/AppImage';
 
-const showrooms = [
+const services = [
 {
-  id: '01',
-  label: 'AUTOMOTIVE',
-  tagline: 'Heat. Glare. UV. Protection.',
-  description: 'Ceramic, metallized, dyed, and clear tint options. Paint protection film in gloss and matte. Engineered for Kuwait\'s extreme climate.',
-  image: 'https://llumarkuwait.com/wp-content/uploads/2024/10/4.Automotive-window-tint-1024x575.jpg',
-  alt: 'LLumar automotive window tint applied to luxury vehicle in Kuwait showroom',
+  id: 'automotive',
+  num: '01',
+  title: 'Automotive Films',
+  tagline: 'Comfort, protection and presence — engineered for the road.',
+  desc: 'From ceramic window tint to full-body paint protection, every LLumar automotive film is engineered for Kuwait\'s extreme climate.',
   href: '/automotive/window-tint',
-  cta: 'Explore Automotive',
-  accent: '#C9A84C'
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_189b8c592-1787540512679.png",
+  alt: 'LLumar automotive window tint on a luxury sports car',
+  cta: 'Explore Automotive'
 },
 {
-  id: '02',
-  label: 'PAINT PROTECTION',
-  tagline: 'Your paint. Protected from the road.',
-  description: 'Self-healing PPF in 6 variants. From Valor\'s ceramic coating hybrid to Platinum Extra for track racing. Factory-backed 10-year warranty.',
-  image: 'https://llumarkuwait.com/wp-content/uploads/2024/10/3.Paint-protection-films-1024x684.jpg',
-  alt: 'LLumar paint protection film being applied to vehicle hood showing self-healing properties',
+  id: 'ppf',
+  num: '02',
+  title: 'Paint Protection Film',
+  tagline: 'Preserve the finish. Let the road take the impact.',
+  desc: 'Self-healing, hydrophobic, and virtually invisible. LLumar PPF protects your vehicle\'s paint from chips, scratches, and environmental damage.',
   href: '/automotive/paint-protection-film',
-  cta: 'Explore PPF',
-  accent: '#C9A84C'
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_178098815-1772067502676.png",
+  alt: 'Professional LLumar paint protection film installation on a vehicle',
+  cta: 'Explore PPF'
 },
 {
-  id: '03',
-  label: 'ARCHITECTURAL',
-  tagline: 'Buildings that perform.',
-  description: 'Solar control, decorative, and safety films for residential and commercial properties. Energy savings, privacy, and protection in one solution.',
-  image: 'https://llumarkuwait.com/wp-content/uploads/2024/10/5.Residential-Window-Film-1024x768.jpg',
-  alt: 'LLumar architectural window film installed on commercial building glass facade in Kuwait',
+  id: 'architectural',
+  num: '03',
+  title: 'Architectural Films',
+  tagline: 'Transform your space. Control your environment.',
+  desc: 'Residential and commercial window film solutions that reduce heat, block UV, enhance privacy, and elevate the aesthetic of any space.',
   href: '/architectural/residential-commercial',
-  cta: 'Explore Architectural',
-  accent: '#C9A84C'
+  image: "https://images.unsplash.com/photo-1724588846681-3cf43f15c8d2",
+  alt: 'Modern interior with LLumar architectural window film on large glass panels',
+  cta: 'Explore Architectural'
 }];
 
 
 export default function ShowroomSection() {
-  const [active, setActive] = useState(0);
-  const [animating, setAnimating] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {if (entry.isIntersecting) setVisible(true);},
-      { threshold: 0.2 }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      },
+      { threshold: 0.15 }
     );
-    if (sectionRef.current) observer.observe(sectionRef.current);
+    itemRefs.current.forEach((el) => {if (el) observer.observe(el);});
     return () => observer.disconnect();
   }, []);
 
-  const handleSelect = (idx: number) => {
-    if (idx === active || animating) return;
-    setAnimating(true);
-    setActive(idx);
-    setTimeout(() => setAnimating(false), 600);
-  };
-
-  const current = showrooms[active];
-
   return (
-    <section ref={sectionRef} className="relative w-full min-h-screen bg-black overflow-hidden flex flex-col">
-      {/* Header */}
-      <div
-        className="relative z-10 pt-20 pb-8 px-6 md:px-10 max-w-[1400px] mx-auto w-full"
-        style={{
-          opacity: visible ? 1 : 0,
-          transform: visible ? 'translateY(0)' : 'translateY(20px)',
-          transition: 'opacity 0.8s ease, transform 0.8s ease'
-        }}>
-
-        <span className="text-[10px] tracking-[0.5em] text-[#C9A84C] uppercase font-medium">Our Services</span>
-        <h2 className="mt-3 text-4xl md:text-5xl font-display font-light text-white tracking-tight">
-          Interactive Showroom
-        </h2>
-      </div>
-
-      {/* Main content */}
-      <div className="flex-1 flex flex-col lg:flex-row">
-        {/* Left — selector tabs */}
-        <div className="lg:w-80 flex flex-row lg:flex-col border-b lg:border-b-0 lg:border-r border-white/10 flex-shrink-0">
-          {showrooms.map((item, idx) =>
-          <button
-            key={item.id}
-            onClick={() => handleSelect(idx)}
-            className={`flex-1 lg:flex-none text-left px-6 md:px-10 py-6 lg:py-8 border-r lg:border-r-0 lg:border-b border-white/10 last:border-0 transition-all duration-300 group relative overflow-hidden ${active === idx ? 'bg-white/5' : 'hover:bg-white/3'}`}>
-
-              {active === idx &&
-            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-[#C9A84C]" />
-            }
-              <div className={`text-[10px] tracking-[0.4em] font-medium mb-1 transition-colors duration-300 ${active === idx ? 'text-[#C9A84C]' : 'text-white/30'}`}>
-                {item.id}
-              </div>
-              <div className={`text-sm md:text-base font-display font-light tracking-wider transition-colors duration-300 ${active === idx ? 'text-white' : 'text-white/50 group-hover:text-white/70'}`}>
-                {item.label}
-              </div>
-              <div className={`hidden lg:block text-xs text-white/30 mt-1 transition-all duration-300 ${active === idx ? 'max-h-10 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
-                {item.tagline}
-              </div>
-            </button>
-          )}
+    <section ref={sectionRef} className="bg-[#FAFAF8] py-24 lg:py-32">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+        {/* Header */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">
+          <div>
+            <span className="section-label">Our Services</span>
+            <h2 className="mt-3 font-display font-light text-[#1A1A1A] leading-tight" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
+              The Complete<br />
+              <span className="italic text-[#6B6560]">Protection System</span>
+            </h2>
+          </div>
+          <p className="text-sm text-[#6B6560] leading-relaxed max-w-[360px] lg:text-right">
+            Three categories. One uncompromising standard. Every product installed by Kuwait's most experienced LLumar team.
+          </p>
         </div>
 
-        {/* Right — full-bleed image + content */}
-        <div className="flex-1 relative min-h-[60vh] lg:min-h-0 overflow-hidden">
-          {showrooms.map((item, idx) =>
+        {/* Service items — editorial asymmetric layout */}
+        <div className="flex flex-col gap-0">
+          {services.map((service, i) =>
           <div
-            key={item.id}
-            className="absolute inset-0 transition-all duration-700"
-            style={{
-              opacity: active === idx ? 1 : 0,
-              transform: active === idx ? 'scale(1)' : 'scale(1.03)',
-              pointerEvents: active === idx ? 'auto' : 'none'
-            }}>
+            key={service.id}
+            ref={(el) => {itemRefs.current[i] = el;}}
+            className={`reveal-up stagger-${i + 1} group grid grid-cols-1 lg:grid-cols-2 border-t border-[#E0DBD5] ${i === services.length - 1 ? 'border-b' : ''}`}>
 
-              <AppImage
-              src={item.image}
-              alt={item.alt}
-              fill
-              className="object-cover object-center" />
+              {/* Text side */}
+              <div className={`py-12 lg:py-16 ${i % 2 === 0 ? 'lg:pr-16' : 'lg:pl-16 lg:order-2'}`}>
+                <div className="flex items-start gap-6">
+                  <span className="text-[11px] tracking-[0.4em] text-[#CC0000] font-semibold mt-1 flex-shrink-0">{service.num}</span>
+                  <div className="flex-1">
+                    <h3 className="text-2xl lg:text-3xl font-display font-light text-[#1A1A1A] mb-3">{service.title}</h3>
+                    <p className="text-base text-[#1A1A1A] font-medium mb-4 leading-snug">{service.tagline}</p>
+                    <p className="text-sm text-[#6B6560] leading-relaxed mb-8">{service.desc}</p>
+                    <Link
+                    href={service.href}
+                    className="inline-flex items-center gap-3 text-[11px] font-semibold tracking-[0.2em] uppercase text-[#CC0000] group-hover:gap-5 transition-all duration-300">
 
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                      {service.cta}
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Image side */}
+              <div className={`relative h-64 lg:h-auto overflow-hidden bg-[#1A1A1A] ${i % 2 === 0 ? '' : 'lg:order-1'}`}>
+                <AppImage
+                src={service.image}
+                alt={service.alt}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105" />
+
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500" />
+              </div>
             </div>
           )}
-
-          {/* Content overlay */}
-          <div className="absolute inset-0 z-10 flex items-end p-8 md:p-12">
-            <div
-              key={active}
-              className="max-w-lg"
-              style={{
-                opacity: animating ? 0 : 1,
-                transform: animating ? 'translateY(10px)' : 'translateY(0)',
-                transition: 'opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s'
-              }}>
-
-              <h3 className="text-3xl md:text-5xl font-display font-light text-white leading-tight tracking-tight">
-                {current.tagline}
-              </h3>
-              <p className="mt-4 text-sm text-white/50 leading-relaxed max-w-sm">
-                {current.description}
-              </p>
-              <a
-                href={current.href}
-                className="mt-6 inline-flex items-center gap-3 text-xs tracking-widest text-[#C9A84C] uppercase font-medium group">
-
-                {current.cta}
-                <span className="w-8 h-px bg-[#C9A84C] group-hover:w-14 transition-all duration-300" />
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>);

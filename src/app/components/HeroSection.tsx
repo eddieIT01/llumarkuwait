@@ -1,239 +1,182 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import AppImage from '@/components/ui/AppImage';
 
-const slides = [
-{
-  image: 'https://llumarkuwait.com/wp-content/uploads/2024/10/automotive-films.jpg',
-  eyebrow: 'Est. 2000 · Exclusive Distributor',
-  headline: 'Protection Without',
-  headlineItalic: 'Compromise.',
-  sub: 'Rule the road with Kuwait\'s most trusted automotive tint and paint protection.',
-  cta: 'Explore Automotive',
-  ctaHref: '#services',
-  tag: 'Automotive Films'
-},
-{
-  image: 'https://llumarkuwait.com/wp-content/uploads/2024/10/ppf.jpg',
-  eyebrow: 'Paint Protection Film',
-  headline: 'Self-Healing.',
-  headlineItalic: 'Built to Last.',
-  sub: 'LLumar PPF stands up to rocks, bird droppings, salt, sand — and Kuwait\'s extreme heat.',
-  cta: 'Explore PPF',
-  ctaHref: '#services',
-  tag: 'PPF'
-},
-{
-  image: 'https://llumarkuwait.com/wp-content/uploads/2024/10/architectural-films.jpg',
-  eyebrow: 'Architectural Films',
-  headline: 'Comfort Starts',
-  headlineItalic: 'at the Glass.',
-  sub: 'Energy-saving solar control film for homes and commercial buildings across Kuwait.',
-  cta: 'Explore Architectural',
-  ctaHref: '#services',
-  tag: 'Architectural'
-},
-{
-  image: 'https://llumarkuwait.com/wp-content/uploads/2024/10/front-wind-shield.jpg',
-  eyebrow: 'Windshield Protection',
-  headline: 'Clear Vision.',
-  headlineItalic: 'Total Defense.',
-  sub: 'Windshield protection film that guards against cracks, chips, and UV without distortion.',
-  cta: 'Learn More',
-  ctaHref: '#services',
-  tag: 'Windshield Film'
-}];
-
-
 export default function HeroSection() {
-  const [current, setCurrent] = useState(0);
-  const [transitioning, setTransitioning] = useState(false);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const heroRef = useRef<HTMLElement>(null);
-
-  const goTo = (idx: number) => {
-    if (transitioning || idx === current) return;
-    setTransitioning(true);
-    setTimeout(() => {
-      setCurrent(idx);
-      setTransitioning(false);
-    }, 400);
-  };
-
-  const next = () => goTo((current + 1) % slides.length);
+  const heroRef = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLDivElement>(null);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    intervalRef.current = setInterval(next, 6000);
-    return () => {if (intervalRef.current) clearInterval(intervalRef.current);};
-  }, [current, transitioning]);
-
-  useEffect(() => {
-    const handleMouse = (e: MouseEvent) => {
-      if (!heroRef.current) return;
-      const rect = heroRef.current.getBoundingClientRect();
-      setMousePos({
-        x: (e.clientX - rect.left) / rect.width - 0.5,
-        y: (e.clientY - rect.top) / rect.height - 0.5
-      });
-    };
-    const el = heroRef.current;
-    el?.addEventListener('mousemove', handleMouse);
-    return () => el?.removeEventListener('mousemove', handleMouse);
+    const t = setTimeout(() => setLoaded(true), 80);
+    return () => clearTimeout(t);
   }, []);
 
-  const slide = slides[current];
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!imgRef?.current) return;
+      const scrollY = window.scrollY;
+      imgRef.current.style.transform = `scale(1.1) translateY(${scrollY * 0.22}px)`;
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <section
-      ref={heroRef}
-      className="relative min-h-screen w-full overflow-hidden flex items-center"
-      aria-label="Hero section">
-
-      {/* Background images — all rendered, only active is visible */}
-      {slides.map((s, i) =>
-      <div
-        key={s.image}
-        className="absolute inset-0 transition-opacity duration-700 ease-in-out"
-        style={{ opacity: i === current ? 1 : 0 }}>
-
-          <AppImage
-          src={s.image}
-          alt={`LLumar Kuwait - ${s.tag} - dark automotive photography`}
+    <section ref={heroRef} className="relative w-full h-screen min-h-[700px] overflow-hidden bg-[#050505] flex items-end">
+      {/* Background image with parallax */}
+      <div ref={imgRef} className="absolute inset-0 will-change-transform" style={{ transform: 'scale(1.1)' }}>
+        <AppImage
+          src="https://img.rocket.new/generatedImages/rocket_gen_img_108242f7a-1779492497419.png"
+          alt="Premium LLumar automotive window tint on a luxury vehicle in Kuwait"
           fill
           className="object-cover object-center"
-          priority={i === 0}
-          sizes="100vw" />
-
-          {/* Parallax layer on active slide */}
-          {i === current &&
-        <div
-          className="absolute inset-0"
-          style={{
-            transform: `translate(${mousePos.x * 12}px, ${mousePos.y * 8}px) scale(1.04)`,
-            transition: 'transform 0.6s cubic-bezier(0.16,1,0.3,1)'
-          }} />
-
-        }
-        </div>
-      )}
-
-      {/* Gradient scrims */}
-      <div className="absolute inset-0 hero-scrim hidden md:block" />
-      <div className="absolute inset-0 hero-scrim-mobile md:hidden" />
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent" />
-      {/* Noise overlay */}
-      <div className="absolute inset-0 bg-noise opacity-40 pointer-events-none" />
-
+          priority
+        />
+      </div>
+      {/* Cinematic gradient layers */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/65 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/40" />
+      {/* Subtle red vignette at bottom-left */}
+      <div className="absolute bottom-0 left-0 w-[600px] h-[300px] bg-gradient-to-tr from-[#CC0000]/15 to-transparent pointer-events-none" />
+      {/* Vertical red accent line */}
+      <div
+        className="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-transparent via-[#CC0000] to-transparent"
+        style={{
+          opacity: loaded ? 1 : 0,
+          transition: 'opacity 1.2s ease 0.8s',
+        }}
+      />
       {/* Content */}
-      <div className="relative z-20 w-full max-w-[1400px] mx-auto px-6 md:px-10 pt-32 pb-24 md:pt-40 md:pb-32">
-        <div className="max-w-3xl">
-          {/* Eyebrow */}
-          <div
-            key={`eyebrow-${current}`}
-            className="animate-reveal-fade opacity-100 mb-6 flex items-center gap-3">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 pb-28 w-full">
+        <div className="max-w-[780px]">
 
-            <span className="w-8 h-px bg-primary" />
-            <span className="text-micro text-primary font-semibold">{slide.eyebrow}</span>
+          {/* Eyebrow label */}
+          <div
+            className="flex items-center gap-3 mb-8"
+            style={{
+              opacity: loaded ? 1 : 0,
+              transform: loaded ? 'translateY(0)' : 'translateY(16px)',
+              transition: 'opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s',
+            }}
+          >
+            <span className="w-10 h-px bg-[#CC0000]" />
+            <span className="text-[10px] tracking-[0.55em] text-white/50 uppercase font-medium">Kuwait's Exclusive LLumar Distributor Since 2000</span>
           </div>
 
-          {/* Headline */}
+          {/* Main headline */}
           <h1
-            key={`headline-${current}`}
-            className="font-display animate-reveal-up opacity-100 mb-2 leading-none"
-            style={{ fontSize: 'clamp(3rem, 8vw, 7rem)', letterSpacing: '-0.02em' }}>
-
-            <span className="text-foreground font-light block">{slide.headline}</span>
-            <span className="text-gradient-gold italic block">{slide.headlineItalic}</span>
+            className="font-display font-light text-white leading-[0.88] tracking-tight mb-4"
+            style={{
+              fontSize: 'clamp(4rem, 10vw, 9.5rem)',
+              opacity: loaded ? 1 : 0,
+              transform: loaded ? 'translateY(0)' : 'translateY(32px)',
+              transition: 'opacity 1s ease 0.35s, transform 1s ease 0.35s',
+            }}
+          >
+            Engineered
+          </h1>
+          <h1
+            className="font-display font-light leading-[0.88] tracking-tight mb-8"
+            style={{
+              fontSize: 'clamp(4rem, 10vw, 9.5rem)',
+              color: 'transparent',
+              WebkitTextStroke: '1px rgba(255,255,255,0.35)',
+              opacity: loaded ? 1 : 0,
+              transform: loaded ? 'translateY(0)' : 'translateY(32px)',
+              transition: 'opacity 1s ease 0.5s, transform 1s ease 0.5s',
+            }}
+          >
+            to Protect.
           </h1>
 
-          {/* Sub */}
-          <p
-            key={`sub-${current}`}
-            className="animate-reveal-up delay-200 opacity-100 text-foreground/70 text-base md:text-lg font-light leading-relaxed max-w-xl mt-6 mb-10">
+          {/* Divider */}
+          <div
+            className="flex items-center gap-4 mb-8"
+            style={{
+              opacity: loaded ? 1 : 0,
+              transition: 'opacity 0.7s ease 0.65s',
+            }}
+          >
+            <span className="w-16 h-px bg-[#CC0000]" />
+            <span className="w-4 h-px bg-white/20" />
+          </div>
 
-            {slide.sub}
+          {/* Subline */}
+          <p
+            className="text-[15px] text-white/50 leading-relaxed max-w-[460px] mb-12 font-light"
+            style={{
+              opacity: loaded ? 1 : 0,
+              transform: loaded ? 'translateY(0)' : 'translateY(16px)',
+              transition: 'opacity 0.7s ease 0.7s, transform 0.7s ease 0.7s',
+            }}
+          >
+            Premium window film and paint protection for vehicles and architecture.
+            Precision-installed by Kuwait's most experienced team.
           </p>
 
           {/* CTAs */}
           <div
-            key={`cta-${current}`}
-            className="animate-reveal-up delay-300 opacity-100 flex flex-col sm:flex-row gap-4">
-
-            <a
-              href={slide.ctaHref}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground text-micro font-semibold tracking-widest hover:bg-accent transition-all duration-300 hover:-translate-y-0.5 group min-h-[48px]">
-
-              {slide.cta}
+            className="flex flex-col sm:flex-row gap-4"
+            style={{
+              opacity: loaded ? 1 : 0,
+              transform: loaded ? 'translateY(0)' : 'translateY(16px)',
+              transition: 'opacity 0.7s ease 0.85s, transform 0.7s ease 0.85s',
+            }}
+          >
+            <Link
+              href="/automotive/window-tint"
+              className="inline-flex items-center gap-3 bg-[#CC0000] text-white text-[11px] font-semibold tracking-[0.2em] uppercase px-9 py-4 hover:bg-[#A30000] transition-colors duration-300 group"
+            >
+              Explore Automotive
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform duration-300">
-                <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+                <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
               </svg>
-            </a>
-            <a
-              href="#booking"
-              className="inline-flex items-center gap-3 px-8 py-4 border border-foreground/30 text-foreground text-micro font-semibold tracking-widest hover:border-primary hover:text-primary transition-all duration-300 min-h-[48px]">
-
-              Book Installation
-            </a>
-          </div>
-        </div>
-
-        {/* Floating stat card */}
-        <div className="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2 animate-float-slow">
-          <div className="bg-card/80 backdrop-blur-xl border border-border/60 rounded-2xl p-6 w-56 card-glow">
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-micro text-muted-foreground">Kuwait&apos;s #1</span>
-              <div className="flex items-center gap-1">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
-                </span>
-              </div>
-            </div>
-            <div className="space-y-3">
-              <div>
-                <p className="text-3xl font-display font-light text-foreground">25+</p>
-                <p className="text-xs text-muted-foreground">Years Experience</p>
-              </div>
-              <div className="h-px bg-border/50" />
-              <div>
-                <p className="text-xl font-display font-light text-primary">Since 2000</p>
-                <p className="text-xs text-muted-foreground">Exclusive LLumar Distributor</p>
-              </div>
-            </div>
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-3 border border-white/25 text-white text-[11px] font-semibold tracking-[0.2em] uppercase px-9 py-4 hover:bg-white/8 hover:border-white/50 transition-all duration-300"
+            >
+              Contact LLumar Kuwait
+            </Link>
           </div>
         </div>
       </div>
-
-      {/* Slide indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3">
-        {slides.map((_, i) =>
-        <button
-          key={i}
-          onClick={() => goTo(i)}
-          aria-label={`Go to slide ${i + 1}`}
-          className={`transition-all duration-400 rounded-full min-h-[44px] min-w-[44px] flex items-center justify-center`}>
-
-            <span className={`block rounded-full transition-all duration-400 ${i === current ? 'w-8 h-1 bg-primary' : 'w-2 h-1 bg-foreground/30'}`} />
-          </button>
-        )}
-      </div>
-
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 right-10 z-30 hidden md:flex flex-col items-center gap-2">
-        <div className="w-px h-16 bg-gradient-to-b from-primary to-transparent" />
-        <span className="text-micro text-muted-foreground" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
+      <div
+        className="absolute bottom-10 right-10 hidden lg:flex flex-col items-center gap-2"
+        style={{
+          opacity: loaded ? 1 : 0,
+          transition: 'opacity 0.7s ease 1.1s',
+        }}
+      >
+        <span className="text-[9px] tracking-[0.45em] text-white/25 uppercase" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
+        <div className="w-px h-14 bg-gradient-to-b from-white/25 to-transparent" />
       </div>
-
-      {/* Slide counter */}
-      <div className="absolute bottom-8 left-10 z-30 hidden md:block">
-        <span className="text-micro text-muted-foreground">
-          <span className="text-foreground font-semibold">{String(current + 1).padStart(2, '0')}</span>
-          {' / '}
-          {String(slides.length).padStart(2, '0')}
-        </span>
+      {/* Stats strip — premium glass bar */}
+      <div
+        className="absolute bottom-0 left-0 right-0 border-t border-white/8 bg-black/50 backdrop-blur-md"
+        style={{
+          opacity: loaded ? 1 : 0,
+          transition: 'opacity 0.7s ease 1s',
+        }}
+      >
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <div className="grid grid-cols-3 divide-x divide-white/8">
+            {[
+              { value: '25+', label: 'Years in Kuwait' },
+              { value: '2', label: 'Showrooms' },
+              { value: '2000', label: 'Established' },
+            ]?.map((stat) => (
+              <div key={stat?.label} className="py-5 px-6 text-center group">
+                <div className="text-xl font-display font-light text-white group-hover:text-[#CC0000] transition-colors duration-300">{stat?.value}</div>
+                <div className="text-[9px] tracking-[0.35em] text-white/30 uppercase mt-0.5">{stat?.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-    </section>);
-
+    </section>
+  );
 }

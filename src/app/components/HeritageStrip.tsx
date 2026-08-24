@@ -2,71 +2,74 @@
 import React, { useEffect, useRef } from 'react';
 
 const stats = [
-  { value: '25+', label: 'Years Experience' },
-  { value: '2000', label: 'Founded' },
-  { value: '2', label: 'Showrooms in Kuwait' },
-  { value: '#1', label: 'Window Film Installer' },
-  { value: '100%', label: 'Exclusive Distributor' },
+  { value: '25+', label: 'Years of Experience', detail: 'Serving Kuwait since 2000' },
+  { value: '65+', label: 'Years of LLumar Technology', detail: 'Global film engineering expertise' },
+  { value: '2', label: 'Kuwait Showrooms', detail: 'Shuwaikh & Al Rai' },
+  { value: '#1', label: 'Film Installer in Kuwait', detail: 'Exclusive authorized distributor' },
 ];
 
-export default function HeritageStrip() {
-  const ref = useRef<HTMLDivElement>(null);
+export default function HeritageSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const statsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-            entry.target.classList.remove('is-hidden');
-            observer.unobserve(entry.target);
+            entry.target.classList.add('in-view');
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -5% 0px' }
+      { threshold: 0.1 }
     );
-    const el = ref?.current;
-    if (el) {
-      el?.querySelectorAll('.scroll-animate')?.forEach((node) => {
-        node?.classList?.add('is-hidden');
-        observer?.observe(node);
-      });
-    }
-    return () => observer?.disconnect();
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    statsRef.current.forEach((el) => { if (el) observer.observe(el); });
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <section ref={ref} className="relative py-12 bg-secondary border-y border-border/50 overflow-hidden">
-      {/* Animated gold line top */}
-      <div className="absolute top-0 left-0 right-0 h-px line-gold animate-line-expand opacity-100" />
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Left: Brand statement */}
-          <div className="scroll-animate opacity-100 max-w-xs">
-            <p className="text-micro text-primary mb-2">Exclusive Distributor · Kuwait</p>
-            <p className="text-foreground/80 text-sm leading-relaxed font-light">
-              The leader of Window Film Installation in Kuwait, operating under the principle of <em className="text-foreground not-italic font-medium">"Best Quality & Best Service."</em>
-            </p>
+    <section className="bg-[#1A1A1A] py-24 lg:py-32 overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          {/* Left — editorial text */}
+          <div ref={sectionRef} className="reveal-left">
+            <span className="section-label" style={{ color: '#CC0000' }}>The LLumar Difference</span>
+            <div className="mt-6">
+              <div className="font-display font-light text-white leading-none" style={{ fontSize: 'clamp(4rem, 10vw, 9rem)' }}>
+                25+
+              </div>
+              <div className="text-xl lg:text-2xl font-display font-light text-white/60 mt-1 mb-8">
+                Years of Experience
+              </div>
+              <div className="w-10 h-px bg-[#CC0000] mb-8" />
+              <p className="text-base text-white/55 leading-relaxed max-w-[440px]">
+                One uncompromising standard. Since 2000, LLumar Kuwait has set the benchmark for professional film installation in the region — combining global LLumar technology with deep local expertise.
+              </p>
+              <p className="mt-4 text-sm text-white/35 leading-relaxed max-w-[440px]">
+                Every installation is performed by trained technicians using authentic LLumar films — the same technology trusted by professionals across 100+ countries.
+              </p>
+            </div>
           </div>
 
-          {/* Stats */}
-          <div className="flex flex-wrap justify-center md:justify-end gap-8 md:gap-12">
-            {stats?.map((stat, i) => (
+          {/* Right — stats grid */}
+          <div className="grid grid-cols-2 gap-px bg-white/5">
+            {stats.map((stat, i) => (
               <div
-                key={stat?.label}
-                className="scroll-animate opacity-100 text-center group cursor-default"
-                style={{ animationDelay: `${i * 80}ms` }}
+                key={stat.label}
+                ref={(el) => { statsRef.current[i] = el; }}
+                className={`reveal-up stagger-${i + 1} bg-[#1A1A1A] p-8 hover:bg-white/3 transition-colors duration-300`}
               >
-                <p className="font-display text-2xl md:text-3xl font-light text-gradient-gold group-hover:scale-110 transition-transform duration-300 inline-block">
-                  {stat?.value}
-                </p>
-                <p className="text-micro text-muted-foreground mt-1">{stat?.label}</p>
+                <div className="font-display font-light text-white mb-2" style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
+                  {stat.value}
+                </div>
+                <div className="text-[11px] font-semibold tracking-[0.2em] text-white/60 uppercase mb-1">{stat.label}</div>
+                <div className="text-[11px] text-white/25">{stat.detail}</div>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-px line-gold animate-line-expand opacity-100" />
     </section>
   );
 }
