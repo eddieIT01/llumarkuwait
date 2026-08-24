@@ -27,7 +27,11 @@ export const metadata: Metadata = {
   title: 'LLumar Kuwait — Engineered to Protect',
   description: "Kuwait's exclusive LLumar distributor since 2000. Premium automotive tint, paint protection film, and architectural window films — 25+ years of engineered protection.",
   icons: {
-    icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
+    icon: [
+      { url: '/assets/images/E059CFB8-5B26-481D-9D1A-D046B41D54D0-1787541717456.png', type: 'image/png' },
+    ],
+    shortcut: '/assets/images/E059CFB8-5B26-481D-9D1A-D046B41D54D0-1787541717456.png',
+    apple: '/assets/images/E059CFB8-5B26-481D-9D1A-D046B41D54D0-1787541717456.png',
   },
   openGraph: {
     title: 'LLumar Kuwait — Engineered to Protect',
