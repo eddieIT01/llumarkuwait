@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import LLumarLogo from '@/components/ui/LLumarLogo';
 
 
 const footerLinks = {
@@ -33,11 +34,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12 mb-12">
           {/* Brand column */}
           <div>
-            <img
-              src="/assets/images/9146FE91-3130-4BA1-9353-F4B2DC598CED-1787540957064.jpeg"
-              alt="LLumar Kuwait official logo"
-              style={{ height: '48px', width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)', marginBottom: '20px' }}
-            />
+            <div style={{ marginBottom: '20px' }}>
+              <LLumarLogo height={40} variant="white" />
+            </div>
 
             <p className="text-sm text-white/45 leading-relaxed mb-6 max-w-[240px]">
               Kuwait's exclusive LLumar distributor since 2000. The standard for window film installation in Kuwait.
@@ -104,11 +103,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-[11px] text-white/25 tracking-wider">© 2025 LLumar Kuwait. All rights reserved. Exclusive distributor of LLumar® films in Kuwait.</p>
           <div className="flex items-center gap-2">
-            <img
-              src="/assets/images/9146FE91-3130-4BA1-9353-F4B2DC598CED-1787540957064.jpeg"
-              alt="LLumar brand symbol"
-              style={{ height: '28px', width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)', opacity: 0.5 }}
-            />
+            <LLumarLogo height={24} variant="all-white" className="opacity-50" />
             <span className="text-[10px] text-white/20 tracking-wider ml-1">An Eastman Performance Films brand</span>
           </div>
         </div>

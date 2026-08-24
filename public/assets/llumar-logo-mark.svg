@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <defs>
+    <!-- Mask to create a precise, pure-vector transparent gap between the overlapping shapes -->
+    <mask id="overlap-cutout">
+      <rect width="60" height="60" fill="white" />
+      <!-- Front L expanded by stroke to cut out from Back L -->
+      <polygon points="35.1,11.3 45.3,11.3 24.9,31.7 38.5,31.7 28.3,41.9 4.5,41.9" 
+               fill="black" stroke="black" stroke-width="2" stroke-linejoin="miter" stroke-miterlimit="10" />
+    </mask>
+  </defs>
+
+  <!-- Right-back L (Lighter Red, offset down-right, masked for cutout) -->
+  <polygon points="45.3,18.1 55.5,18.1 35.1,38.5 48.7,38.5 38.5,48.7 14.7,48.7" 
+           fill="#E03030" mask="url(#overlap-cutout)" />
+
+  <!-- Left-front L (Solid Red) -->
+  <polygon points="35.1,11.3 45.3,11.3 24.9,31.7 38.5,31.7 28.3,41.9 4.5,41.9" 
+           fill="#CC0000" />
+</svg>

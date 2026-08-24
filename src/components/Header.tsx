@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import AppImage from '@/components/ui/AppImage';
+import LLumarLogo from '@/components/ui/LLumarLogo';
 
 interface NavItem {
   label: string;
@@ -135,19 +136,10 @@ export default function Header() {
         <nav className="flex items-center justify-between px-6 lg:px-10 py-4 max-w-[1400px] mx-auto">
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0 z-10">
-            {/* On transparent (home hero): screen blend removes dark bg; on solid header: multiply removes white bg */}
             {isTransparent ? (
-              <img
-                src="/assets/images/9146FE91-3130-4BA1-9353-F4B2DC598CED-1787540957064.jpeg"
-                alt="LLumar Kuwait — official exclusive distributor"
-                style={{ height: '44px', width: 'auto', mixBlendMode: 'screen', objectFit: 'contain', transition: 'all 0.5s' }}
-              />
+              <LLumarLogo height={38} variant="white" />
             ) : (
-              <img
-                src="/assets/images/9146FE91-3130-4BA1-9353-F4B2DC598CED-1787540957064.jpeg"
-                alt="LLumar Kuwait — official exclusive distributor"
-                style={{ height: '44px', width: 'auto', mixBlendMode: 'multiply', objectFit: 'contain', transition: 'all 0.5s' }}
-              />
+              <LLumarLogo height={38} variant="default" />
             )}
           </Link>
 
@@ -265,11 +257,7 @@ export default function Header() {
       {/* Mobile full-screen menu */}
       <div className={`fixed inset-0 z-40 bg-[#FAFAF8] flex flex-col transition-all duration-500 lg:hidden ${mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         <div className="flex items-center justify-between px-6 py-4 border-b border-[#E0DBD5]">
-          <img
-            src="/assets/images/IMG_8355-1787540282890.jpeg"
-            alt="LLumar Kuwait"
-            style={{ height: '36px', width: 'auto', mixBlendMode: 'multiply', objectFit: 'contain' }}
-          />
+          <LLumarLogo height={32} variant="default" />
 
           <button onClick={() => setMobileOpen(false)} className="p-2 text-[#1A1A1A]" aria-label="Close menu">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
