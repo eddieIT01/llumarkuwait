@@ -44,31 +44,84 @@ const galleryItems = [
   span: 'col-span-1 row-span-1'
 }];
 
-
 export default function GallerySection() {
-  const revealRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add('in-view');
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReduced) {
+      if (headerRef.current) { headerRef.current.style.opacity = '1'; headerRef.current.style.transform = 'none'; }
+      itemRefs.current.forEach(el => {
+        if (el) { el.style.opacity = '1'; el.style.clipPath = 'none'; el.style.transform = 'none'; }
+      });
+      return;
+    }
+
+    let gsapCtx: { revert: () => void } | null = null;
+
+    const initGSAP = async () => {
+      const { gsap } = await import('gsap');
+      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsapCtx = gsap.context(() => {
+        // Header reveal
+        gsap.set(headerRef.current, { opacity: 0, y: 30 });
+        ScrollTrigger.create({
+          trigger: headerRef.current,
+          start: 'top 85%',
+          onEnter: () => {
+            gsap.to(headerRef.current, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' });
+          },
         });
-      },
-      { threshold: 0.1 }
-    );
-    revealRefs.current.forEach((el) => {if (el) observer.observe(el);});
-    return () => observer.disconnect();
+
+        // Gallery items — editorial clip-path reveal with stagger
+        itemRefs.current.forEach((el, i) => {
+          if (!el) return;
+          const isLarge = i === 0;
+          // Large item: reveal from bottom
+          // Small items: alternating reveal directions
+          const clipStart = isLarge ? 'inset(100% 0 0 0)' : i % 2 === 0 ? 'inset(0 0 100% 0)' : 'inset(0 100% 0 0)';
+
+          gsap.set(el, {
+            clipPath: clipStart,
+            opacity: 0,
+          });
+
+          ScrollTrigger.create({
+            trigger: gridRef.current,
+            start: 'top 75%',
+            onEnter: () => {
+              gsap.to(el, {
+                clipPath: 'inset(0 0% 0 0)',
+                opacity: 1,
+                duration: isLarge ? 1.2 : 0.9,
+                delay: isLarge ? 0 : 0.15 + i * 0.12,
+                ease: 'power3.out',
+              });
+            },
+          });
+        });
+      }, sectionRef);
+    };
+
+    initGSAP();
+    return () => { gsapCtx?.revert(); };
   }, []);
 
   return (
-    <section className="bg-[#FAFAF8] py-24 lg:py-32">
+    <section ref={sectionRef} className="bg-[#FAFAF8] py-24 lg:py-32">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
         {/* Header */}
         <div
-          ref={(el) => {revealRefs.current[0] = el;}}
-          className="reveal-up flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
-
+          ref={headerRef}
+          className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12"
+          style={{ opacity: 0 }}
+        >
           <div>
             <span className="section-label">Gallery & Projects</span>
             <h2 className="mt-3 font-display font-light text-[#1A1A1A] leading-tight" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
@@ -84,32 +137,41 @@ export default function GallerySection() {
           </a>
         </div>
 
-        {/* Asymmetric gallery grid */}
+        {/* Asymmetric editorial gallery grid */}
         <div
-          ref={(el) => {revealRefs.current[1] = el;}}
-          className="reveal-up stagger-2 grid grid-cols-3 grid-rows-2 gap-3 h-[500px] lg:h-[600px]">
-
-          {galleryItems.map((item) =>
+          ref={gridRef}
+          className="grid grid-cols-3 grid-rows-2 gap-3 h-[500px] lg:h-[600px]"
+        >
+          {galleryItems.map((item, i) =>
           <div
             key={item.id}
-            className={`gallery-item relative overflow-hidden bg-[#1A1A1A] ${item.span}`}>
-
+            ref={(el) => { itemRefs.current[i] = el; }}
+            className={`gallery-item-editorial relative overflow-hidden bg-[#1A1A1A] ${item.span}`}
+            style={{ opacity: 0 }}
+          >
               <AppImage
               src={item.image}
               alt={item.alt}
               fill
-              className="object-cover" />
-
-              <div className="gallery-overlay">
-                <div>
+              className="object-cover transition-transform duration-700 ease-out"
+              style={{ transform: 'scale(1.04)' }}
+            />
+              {/* Overlay */}
+              <div className="gallery-editorial-overlay absolute inset-0 bg-black/0 hover:bg-black/45 transition-colors duration-500 flex items-end p-5 lg:p-6">
+                <div className="translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400">
                   <span className="text-[9px] tracking-[0.4em] text-[#CC0000] uppercase font-semibold block mb-1">{item.category}</span>
                   <span className="text-sm font-medium text-white">{item.title}</span>
                 </div>
               </div>
+              {/* Always-visible subtle category tag on large item */}
+              {i === 0 && (
+                <div className="absolute top-5 left-5 z-10">
+                  <span className="text-[9px] tracking-[0.4em] text-white/50 uppercase font-medium">{item.category}</span>
+                </div>
+              )}
             </div>
           )}
         </div>
       </div>
     </section>);
-
 }
