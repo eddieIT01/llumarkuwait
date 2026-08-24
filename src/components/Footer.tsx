@@ -1,47 +1,26 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import LLumarLogo from '@/components/ui/LLumarLogo';
-
-
-const footerLinks = {
-  automotive: [
-  { label: 'Window Tint', href: '/automotive/window-tint' },
-  { label: 'Ceramic Tint', href: '/automotive/ceramic-tint' },
-  { label: 'Paint Protection Film', href: '/automotive/paint-protection-film' },
-  { label: 'FormulaOne by LLumar', href: '/automotive/formulaone' },
-  { label: 'Windshield Protection', href: '/automotive/windshield' }],
-
-  architectural: [
-  { label: 'Residential', href: '/architectural/residential' },
-  { label: 'Commercial', href: '/architectural/commercial' },
-  { label: 'Safety & Security', href: '/architectural/safety-security' },
-  { label: 'Decorative & Privacy', href: '/architectural/decorative' },
-  { label: 'Solar Control', href: '/architectural/solar-control' }],
-
-  company: [
-  { label: 'About LLumar Kuwait', href: '/about' },
-  { label: 'Gallery & Projects', href: '/gallery' },
-  { label: 'Resources', href: '/resources' },
-  { label: 'Contact Us', href: '/contact' }]
-
-};
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Footer() {
+  const { t, isArabic } = useLanguage();
+
   return (
-    <footer className="bg-[#1A1A1A] text-white">
+    <footer className="bg-[#1A1A1A] text-white" dir={isArabic ? 'rtl' : 'ltr'}>
       {/* Main footer */}
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-16 pb-10">
-        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12 mb-12">
+        <div className={`grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12 mb-12`}>
           {/* Brand column */}
           <div>
             <div style={{ marginBottom: '20px' }}>
               <LLumarLogo height={40} variant="white" />
             </div>
-
-            <p className="text-sm text-white/45 leading-relaxed mb-6 max-w-[240px]">
-              Kuwait's exclusive LLumar distributor since 2000. The standard for window film installation in Kuwait.
+            <p className={`text-sm text-white/45 leading-relaxed mb-6 max-w-[240px] ${isArabic ? 'text-right' : ''}`}>
+              {t?.footer?.tagline}
             </p>
-            <div className="flex items-center gap-1">
+            <div className={`flex items-center gap-1 ${isArabic ? 'flex-row-reverse' : ''}`}>
               <a href="https://www.facebook.com/llumarkuwaitofficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="p-2 text-white/30 hover:text-white transition-colors duration-200">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
               </a>
@@ -57,57 +36,57 @@ export default function Footer() {
           {/* Links grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <p className="text-[10px] tracking-[0.4em] text-[#CC0000] uppercase font-semibold mb-4">Automotive</p>
+              <p className={`text-[10px] tracking-[0.4em] text-[#CC0000] uppercase font-semibold mb-4 ${isArabic ? 'tracking-normal text-right' : ''}`}>{t?.footer?.automotive}</p>
               <div className="flex flex-col gap-2.5">
-                {footerLinks?.automotive?.map((l) =>
-                <Link key={l?.label} href={l?.href} className="text-sm text-white/40 hover:text-white transition-colors duration-200">{l?.label}</Link>
-                )}
+                {t?.footer?.links?.automotive?.map((l) => (
+                  <Link key={l?.href} href={l?.href} className={`text-sm text-white/40 hover:text-white transition-colors duration-200 ${isArabic ? 'text-right' : ''}`}>{l?.label}</Link>
+                ))}
               </div>
             </div>
             <div>
-              <p className="text-[10px] tracking-[0.4em] text-[#CC0000] uppercase font-semibold mb-4">Architectural</p>
+              <p className={`text-[10px] tracking-[0.4em] text-[#CC0000] uppercase font-semibold mb-4 ${isArabic ? 'tracking-normal text-right' : ''}`}>{t?.footer?.architectural}</p>
               <div className="flex flex-col gap-2.5">
-                {footerLinks?.architectural?.map((l) =>
-                <Link key={l?.label} href={l?.href} className="text-sm text-white/40 hover:text-white transition-colors duration-200">{l?.label}</Link>
-                )}
+                {t?.footer?.links?.architectural?.map((l) => (
+                  <Link key={l?.href} href={l?.href} className={`text-sm text-white/40 hover:text-white transition-colors duration-200 ${isArabic ? 'text-right' : ''}`}>{l?.label}</Link>
+                ))}
               </div>
             </div>
             <div>
-              <p className="text-[10px] tracking-[0.4em] text-[#CC0000] uppercase font-semibold mb-4">Company</p>
+              <p className={`text-[10px] tracking-[0.4em] text-[#CC0000] uppercase font-semibold mb-4 ${isArabic ? 'tracking-normal text-right' : ''}`}>{t?.footer?.company}</p>
               <div className="flex flex-col gap-2.5">
-                {footerLinks?.company?.map((l) =>
-                <Link key={l?.label} href={l?.href} className="text-sm text-white/40 hover:text-white transition-colors duration-200">{l?.label}</Link>
-                )}
+                {t?.footer?.links?.company?.map((l) => (
+                  <Link key={l?.href} href={l?.href} className={`text-sm text-white/40 hover:text-white transition-colors duration-200 ${isArabic ? 'text-right' : ''}`}>{l?.label}</Link>
+                ))}
               </div>
             </div>
             <div>
-              <p className="text-[10px] tracking-[0.4em] text-[#CC0000] uppercase font-semibold mb-4">Contact</p>
+              <p className={`text-[10px] tracking-[0.4em] text-[#CC0000] uppercase font-semibold mb-4 ${isArabic ? 'tracking-normal text-right' : ''}`}>{t?.footer?.contactLabel}</p>
               <div className="flex flex-col gap-3">
                 <div>
-                  <p className="text-[10px] text-white/25 tracking-wider uppercase mb-1">Shuwaikh</p>
-                  <a href="tel:+96556617907" className="text-sm text-white/40 hover:text-white transition-colors duration-200 block">+965 566 17907</a>
-                  <a href="tel:+96597714949" className="text-sm text-white/40 hover:text-white transition-colors duration-200 block">+965 9771 4949</a>
+                  <p className={`text-[10px] text-white/25 tracking-wider uppercase mb-1 ${isArabic ? 'text-right tracking-normal' : ''}`}>{t?.footer?.shuwaikh}</p>
+                  <a href="tel:+96556617907" className={`text-sm text-white/40 hover:text-white transition-colors duration-200 block ${isArabic ? 'text-right' : ''}`}>+965 566 17907</a>
+                  <a href="tel:+96597714949" className={`text-sm text-white/40 hover:text-white transition-colors duration-200 block ${isArabic ? 'text-right' : ''}`}>+965 9771 4949</a>
                 </div>
                 <div>
-                  <p className="text-[10px] text-white/25 tracking-wider uppercase mb-1">Al Rai</p>
-                  <a href="tel:+96565008585" className="text-sm text-white/40 hover:text-white transition-colors duration-200 block">+965 6500 8585</a>
-                  <a href="tel:1886660" className="text-sm text-white/40 hover:text-white transition-colors duration-200 block">Hotline: 1886660</a>
+                  <p className={`text-[10px] text-white/25 tracking-wider uppercase mb-1 ${isArabic ? 'text-right tracking-normal' : ''}`}>{t?.footer?.alRai}</p>
+                  <a href="tel:+96565008585" className={`text-sm text-white/40 hover:text-white transition-colors duration-200 block ${isArabic ? 'text-right' : ''}`}>+965 6500 8585</a>
+                  <a href="tel:1886660" className={`text-sm text-white/40 hover:text-white transition-colors duration-200 block ${isArabic ? 'text-right' : ''}`}>{t?.footer?.hotline}: 1886660</a>
                 </div>
-                <a href="mailto:info@llumarkuwait.com" className="text-sm text-white/40 hover:text-[#CC0000] transition-colors duration-200">info@llumarkuwait.com</a>
+                <a href="mailto:info@llumarkuwait.com" className={`text-sm text-white/40 hover:text-[#CC0000] transition-colors duration-200 ${isArabic ? 'text-right' : ''}`}>info@llumarkuwait.com</a>
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[11px] text-white/25 tracking-wider">© 2025 LLumar Kuwait. All rights reserved. Exclusive distributor of LLumar® films in Kuwait.</p>
-          <div className="flex items-center gap-2">
+        <div className={`pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 ${isArabic ? 'md:flex-row-reverse' : ''}`}>
+          <p className={`text-[11px] text-white/25 tracking-wider ${isArabic ? 'text-right tracking-normal' : ''}`}>{t?.footer?.copyright}</p>
+          <div className={`flex items-center gap-2 ${isArabic ? 'flex-row-reverse' : ''}`}>
             <LLumarLogo height={24} variant="all-white" className="opacity-50" />
-            <span className="text-[10px] text-white/20 tracking-wider ml-1">An Eastman Performance Films brand</span>
+            <span className="text-[10px] text-white/20 tracking-wider ml-1">{t?.footer?.eastman}</span>
           </div>
         </div>
       </div>
-    </footer>);
-
+    </footer>
+  );
 }
