@@ -6,113 +6,117 @@ import AppImage from '@/components/ui/AppImage';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Decorative Window Films — LLumar Kuwait',
-  description: 'LLumar® iLLusions™ decorative window films in Kuwait. Frosted, patterned, and gradient films for homes and commercial spaces.'
+  title: 'Decorative & Privacy Films — LLumar Kuwait',
+  description: 'LLumar decorative and privacy window films in Kuwait. Transform glass into a design element with patterns, gradients and privacy solutions.'
 };
 
-const residentialBenefits = [
-{ title: 'Designer Style', desc: 'Express yourself, create a mood, or update the look of a room with a subtle or dramatic film.' },
-{ title: 'Added Privacy', desc: 'Protective privacy for bathroom windows, shower doors, and glass cabinet doors.' },
-{ title: 'Hidden Views', desc: 'Conceal clutter or unsightly areas while maintaining natural light flow.' },
-{ title: 'Specialty Effects', desc: 'Frosted looks, nature motifs, playful patterns — a series to meet your personal taste.' },
-{ title: 'Light Filtering', desc: 'Control the amount and quality of light entering any room.' },
-{ title: 'Easy Updates', desc: 'Unlike specialty glass, decorative film is budget-friendly and minimally disruptive to install or remove.' }];
+const applications = [
+{ title: 'Office Partitions', desc: 'Create elegant glass partitions with privacy while maintaining an open, light-filled environment.' },
+{ title: 'Bathroom Privacy', desc: 'Frosted and patterned films for bathroom windows — privacy without sacrificing natural light.' },
+{ title: 'Retail Branding', desc: 'Custom graphics and branded films for storefronts and retail environments.' },
+{ title: 'Conference Rooms', desc: 'Privacy films for meeting room glass walls — professional and functional.' },
+{ title: 'Decorative Accents', desc: 'Geometric patterns, gradients and artistic films that transform glass into a design feature.' },
+{ title: 'Entrance Glass', desc: 'Elegant frosted or patterned films for entrance doors and sidelights.' }];
 
 
 export default function DecorativePage() {
   return (
-    <main className="bg-black text-white min-h-screen">
+    <main className="bg-[#FAFAF8] text-[#111111] min-h-screen">
       <Header />
 
       {/* Hero */}
-      <section className="relative w-full h-[70vh] flex items-end overflow-hidden">
+      <section className="relative w-full h-[65vh] min-h-[500px] overflow-hidden bg-[#1A1A1A] flex items-end">
         <AppImage
-          src="https://llumarkuwait.com/wp-content/uploads/2024/10/6.-Residential-decorative-1024x768.jpg"
-          alt="LLumar iLLusions decorative window film with frosted pattern on residential window"
+          src="https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/architectural/llumar-decorative-film.jpg"
+          alt="Elegant LLumar decorative window film creating privacy patterns on office glass"
           fill
-          className="object-cover object-center opacity-45"
+          className="object-cover opacity-55"
           priority />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-10 pb-16 w-full">
-          <nav className="flex items-center gap-2 text-xs text-white/30 mb-6 tracking-wider">
-            <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-white/50">Architectural</span>
-            <span>/</span>
-            <span className="text-[#C9A84C]">Decorative Films</span>
-          </nav>
-          <span className="text-[10px] tracking-[0.5em] text-[#C9A84C] uppercase font-medium">Architectural</span>
-          <h1 className="mt-3 text-5xl md:text-7xl font-display font-light text-white leading-none tracking-tight">
-            Decorative<br />
-            <span className="italic text-white/60">Films</span>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 pb-16 w-full">
+          <span className="section-label" style={{ color: '#CC0000' }}>Architectural</span>
+          <h1 className="mt-3 font-display font-light text-white leading-tight" style={{ fontSize: 'clamp(3rem, 7vw, 6rem)' }}>
+            Decorative &<br />
+            <span className="italic text-white/70">Privacy Films</span>
           </h1>
+          <p className="mt-4 text-base text-white/55 max-w-[480px] leading-relaxed">
+            Transform glass into a design element. LLumar decorative films combine aesthetic appeal with functional privacy — for homes, offices and commercial spaces.
+          </p>
         </div>
       </section>
 
-      {/* Residential */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-10 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16">
-          <div>
-            <span className="text-[10px] tracking-[0.5em] text-[#C9A84C] uppercase font-medium">Residential</span>
-            <h2 className="mt-3 text-3xl font-display font-light text-white">LLumar® iLLusions™</h2>
-            <p className="mt-4 text-sm text-white/40 leading-relaxed">
-              Enhance the privacy level, look or mood of any room with LLumar® iLLusions™ decorative window film for homes. We offer a wide variety of styles, inspired by current design trends, that can complement interiors ranging from traditional to contemporary.
-            </p>
-            <p className="mt-3 text-sm text-white/40 leading-relaxed">
-              Classic frosted looks, soothing nature motifs, playful patterns and more — we have a series to meet your personal taste. Any smooth glass surface is fair game, so you can dream up your ideal decorative accent.
-            </p>
+      {/* Intro */}
+      <section className="bg-[#FAFAF8] py-20 lg:py-28">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+            <div>
+              <span className="section-label">Design Meets Function</span>
+              <h2 className="mt-3 font-display font-light text-[#1A1A1A] leading-tight mb-6" style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
+                Glass as a<br />
+                <span className="italic text-[#6B6560]">Design Element</span>
+              </h2>
+              <p className="text-base text-[#1A1A1A] leading-relaxed mb-4">
+                LLumar decorative films transform ordinary glass into a sophisticated design feature. From frosted privacy films to geometric patterns and custom graphics — the possibilities are extensive.
+              </p>
+              <p className="text-sm text-[#6B6560] leading-relaxed mb-8">
+                Unlike etched or sandblasted glass, decorative film can be removed or replaced — giving you the flexibility to update your space without replacing the glass itself.
+              </p>
+              <div className="grid grid-cols-2 gap-3">
+                {['Frosted Privacy', 'Geometric Patterns', 'Custom Graphics', 'Gradient Effects', 'Removable', 'Cost-effective'].map((f) =>
+                <div key={f} className="flex items-center gap-2.5">
+                    <span className="w-1 h-1 bg-[#CC0000] rounded-full flex-shrink-0" />
+                    <span className="text-sm text-[#1A1A1A]">{f}</span>
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className="relative h-80 lg:h-[500px] overflow-hidden bg-[#1A1A1A]">
+              <AppImage
+                src="https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/architectural/llumar-decorative-film.jpg"
+                alt="LLumar decorative window film in a modern office space"
+                fill
+                className="object-cover" />
+
+            </div>
           </div>
-          <div className="grid grid-cols-2 gap-px bg-white/5">
-            {residentialBenefits.map((b) =>
-            <div key={b.title} className="bg-black p-6">
-                <h3 className="text-sm font-medium text-white mb-2">{b.title}</h3>
-                <p className="text-xs text-white/35 leading-relaxed">{b.desc}</p>
+
+          {/* Applications */}
+          <span className="section-label">Applications</span>
+          <h2 className="mt-3 font-display font-light text-[#1A1A1A] leading-tight mb-12" style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
+            Where Decorative Film<br />
+            <span className="italic text-[#6B6560]">Works Best</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E0DBD5]">
+            {applications.map((app, i) =>
+            <div key={app.title} className="bg-[#FAFAF8] p-8 hover:bg-white transition-colors duration-300">
+                <div className="text-[10px] tracking-[0.4em] text-[#CC0000] uppercase font-semibold mb-3">0{i + 1}</div>
+                <h3 className="text-lg font-display font-light text-[#1A1A1A] mb-3">{app.title}</h3>
+                <p className="text-sm text-[#6B6560] leading-relaxed">{app.desc}</p>
               </div>
             )}
           </div>
         </div>
       </section>
 
-      {/* Commercial */}
-      <section className="border-t border-white/10 max-w-[1400px] mx-auto px-6 md:px-10 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <span className="text-[10px] tracking-[0.5em] text-[#C9A84C] uppercase font-medium">Commercial</span>
-            <h2 className="mt-3 text-3xl font-display font-light text-white">Commercial Window Films</h2>
-            <p className="mt-4 text-sm text-white/40 leading-relaxed">
-              Our thoughtfully curated line of decorative window film transforms the function and feel of commercial spaces by adding privacy, filtering light, and creating one-of-a-kind designs.
-            </p>
-            <p className="mt-3 text-sm text-white/40 leading-relaxed">
-              Unlike specialty glass, decorative window film is budget-friendly and minimally disruptive when installing or removing. This makes it a smart space refresher when styles or clients change.
-            </p>
-            <div className="mt-6 flex flex-col gap-2">
-              {['Windows & Partitions', 'Glass Doors & Cabinets', 'Custom Logo Designs', 'Glass Furniture'].map((use) =>
-              <div key={use} className="flex items-center gap-2 text-sm text-white/50">
-                  <span className="w-1 h-1 bg-[#C9A84C] rounded-full" />
-                  {use}
-                </div>
-              )}
-            </div>
-          </div>
-          <AppImage
-            src="https://llumarkuwait.com/wp-content/uploads/2024/10/9.-Commercial-Window-Films-1024x768.jpg"
-            alt="LLumar commercial decorative window film on office partition creating privacy and design"
-            width={600}
-            height={450}
-            className="w-full h-80 object-cover opacity-70" />
-
-        </div>
-      </section>
-
       {/* CTA */}
-      <section className="border-t border-white/10 py-20">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 text-center">
-          <h2 className="text-3xl font-display font-light text-white mb-4">Design your space</h2>
-          <p className="text-sm text-white/40 mb-8">Explore our decorative film options at our Kuwait showrooms.</p>
-          <Link href="/#booking" className="inline-flex items-center gap-3 bg-[#C9A84C] text-black text-xs font-semibold tracking-widest uppercase px-8 py-4 hover:bg-[#E8C96A] transition-colors duration-300">
-            Book Consultation
-          </Link>
+      <section className="bg-[#F5F0EA] py-20">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 text-center">
+          <h2 className="font-display font-light text-[#1A1A1A] leading-tight mb-6" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}>
+            Discuss Your Project
+          </h2>
+          <p className="text-sm text-[#6B6560] mb-10 max-w-[400px] mx-auto leading-relaxed">
+            Contact LLumar Kuwait to discuss your decorative film requirements and explore the available options.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://wa.me/96565008585?text=I'm interested in decorative and privacy window film." target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-[#CC0000] text-white text-[11px] font-semibold tracking-[0.2em] uppercase px-8 py-4 hover:bg-[#A30000] transition-colors duration-300">
+              Get a Quote
+            </a>
+            <Link href="/contact" className="inline-flex items-center justify-center gap-3 border border-[#1A1A1A] text-[#1A1A1A] text-[11px] font-semibold tracking-[0.2em] uppercase px-8 py-4 hover:bg-[#1A1A1A] hover:text-white transition-all duration-300">
+              Contact Us
+            </Link>
+          </div>
         </div>
       </section>
 

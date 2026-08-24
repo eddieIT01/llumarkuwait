@@ -6,152 +6,166 @@ import AppImage from '@/components/ui/AppImage';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Paint Protection Film — LLumar Kuwait',
-  description: 'LLumar® PPF in Kuwait. Self-healing, hydrophobic paint protection film in 6 variants. Valor, Platinum, Select Black and more. 10-year warranty.'
+  title: 'Paint Protection Film (PPF) — LLumar Kuwait',
+  description: 'LLumar paint protection film in Kuwait. Self-healing, hydrophobic PPF in gloss and matte finishes. Professional installation by Kuwait\'s most experienced team.'
 };
 
-const products = [
+const ppfProducts = [
 {
-  name: 'Valor PPF',
-  tagline: '2-in-1 PPF + Ceramic Coating',
-  description: 'Get the sought-after benefits of premium PPF and easy-wash ceramic coating with 2-in-1 Valor, featuring our OEM-trusted Tetrashield™ technology.',
-  features: ['Super hydrophobic surface', 'Deep gloss finish', 'Stands up to bird droppings & corrosives', 'Tetrashield™ technology'],
-  badge: 'PREMIUM'
+  id: 'gloss',
+  name: 'Gloss PPF',
+  tagline: 'Crystal-clear protection that enhances your paint.',
+  desc: 'LLumar gloss PPF is virtually invisible — preserving your vehicle\'s original finish while providing a robust barrier against chips, scratches and environmental damage.',
+  features: ['Self-healing technology', 'Hydrophobic surface', 'Optical clarity', 'UV stable', 'Scratch resistant', 'Stain resistant']
 },
 {
-  name: 'Select Black PPF',
-  tagline: 'Restyle & Protect',
-  description: 'Transform your paint color to a rich, glossy black with all the protective benefits of our Platinum PPF.',
-  features: ['Full color transformation', 'More affordable than paint', 'Tougher than vinyl', 'Full wrap or accent coverage'],
-  badge: 'STYLE'
-},
-{
-  name: 'Platinum Extra PPF',
-  tagline: 'Maximum Impact Resistance',
-  description: 'Our highest impact resistance in a thicker, stronger PPF made for gravel roads, track racing, and harsh weather.',
-  features: ['Chip-fighting finish defense', 'Ideal for high-vulnerability areas', '10-year limited warranty', 'Track & off-road ready'],
-  badge: 'EXTREME'
-},
-{
-  name: 'Platinum Gloss PPF',
-  tagline: 'The Enthusiast\'s Choice',
-  description: 'A favorite of auto enthusiasts and purists; helps your vehicle retain its value by defending the finish.',
-  features: ['High-shine top-coat', 'Blends with factory paint', 'HydroGard™ stain resistance', 'Self-healing'],
-  badge: 'POPULAR'
-},
-{
-  name: 'Platinum Matte PPF',
-  tagline: 'Flat Finish, Full Protection',
-  description: 'All the features of our Platinum PPF, in a standout flat finish that can transform glossy paint or blend with custom matte paint.',
-  features: ['Flat matte finish', 'Beads water & fights stains', 'Self-heals with heat', 'HydroGard™ technology'],
-  badge: 'MATTE'
-},
-{
-  name: 'Gloss & Matte PPF',
-  tagline: 'Road-Tested Value',
-  description: 'Affordable, extensively road-tested, and made to help keep high-shine or flat finishes looking pristine for years.',
-  features: ['Available in gloss or matte', 'Self-heals with sun or engine heat', 'Extensively road-tested', 'Budget-friendly protection'],
-  badge: 'VALUE'
+  id: 'matte',
+  name: 'Matte PPF',
+  tagline: 'Transform gloss paint to a premium satin finish.',
+  desc: 'LLumar matte PPF converts any gloss paint to a sophisticated satin finish while providing the same level of protection. The ultimate upgrade for discerning vehicle owners.',
+  features: ['Satin matte finish', 'Self-healing technology', 'Hydrophobic surface', 'UV stable', 'Scratch resistant', 'Premium appearance']
 }];
+
+
+const coverageOptions = [
+{ title: 'Partial Front', desc: 'Hood, front bumper and mirrors — protecting the highest-impact areas.' },
+{ title: 'Full Front', desc: 'Complete front-end protection including fenders, A-pillars and headlights.' },
+{ title: 'Full Body', desc: 'Comprehensive protection for the entire vehicle exterior.' },
+{ title: 'Custom', desc: 'Targeted protection for specific panels, door edges or high-wear areas.' }];
 
 
 export default function PPFPage() {
   return (
-    <main className="bg-black text-white min-h-screen">
+    <main className="bg-[#FAFAF8] text-[#111111] min-h-screen">
       <Header />
 
       {/* Hero */}
-      <section className="relative w-full h-[70vh] flex items-end overflow-hidden">
+      <section className="relative w-full h-[65vh] min-h-[500px] overflow-hidden bg-[#1A1A1A] flex items-end">
         <AppImage
-          src="https://llumarkuwait.com/wp-content/uploads/2024/10/3.Paint-protection-films-1024x684.jpg"
-          alt="LLumar paint protection film applied to vehicle showing self-healing and hydrophobic properties"
+          src="https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/ppf/llumar-ppf-installation.jpg"
+          alt="Professional LLumar paint protection film installation on a vehicle"
           fill
-          className="object-cover object-center opacity-50"
+          className="object-cover opacity-60"
           priority />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-10 pb-16 w-full">
-          <nav className="flex items-center gap-2 text-xs text-white/30 mb-6 tracking-wider">
-            <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-white/50">Automotive</span>
-            <span>/</span>
-            <span className="text-[#C9A84C]">Paint Protection Film</span>
-          </nav>
-          <span className="text-[10px] tracking-[0.5em] text-[#C9A84C] uppercase font-medium">Automotive</span>
-          <h1 className="mt-3 text-5xl md:text-7xl font-display font-light text-white leading-none tracking-tight">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 pb-16 w-full">
+          <span className="section-label" style={{ color: '#CC0000' }}>Automotive</span>
+          <h1 className="mt-3 font-display font-light text-white leading-tight" style={{ fontSize: 'clamp(3rem, 7vw, 6rem)' }}>
             Paint Protection<br />
-            <span className="italic text-white/60">Film</span>
+            <span className="italic text-white/70">Film</span>
           </h1>
-          <div className="mt-6 flex flex-wrap gap-4">
-            {['SELF-HEALING', 'HYDROPHOBIC', 'FACTORY-BACKED'].map((tag) =>
-            <span key={tag} className="text-[10px] tracking-widest text-white/40 border border-white/15 px-3 py-1.5 uppercase">{tag}</span>
-            )}
-          </div>
+          <p className="mt-4 text-base text-white/55 max-w-[480px] leading-relaxed">
+            Preserve the finish. Let the road take the impact. LLumar PPF is the invisible shield between your paint and everything the road throws at it.
+          </p>
         </div>
       </section>
 
-      {/* Intro */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-10 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <div>
-            <p className="text-lg text-white/70 leading-relaxed font-light">
-              LLumar® paint protection film makes it easy to keep your car's finish looking like you just drove off the lot. Paint protection film effectively stands up to flying rocks, bird droppings, salt, sand and more.
-            </p>
-            <p className="mt-4 text-sm text-white/40 leading-relaxed">
-              We offer multiple finishes, innovative 2-in-1 products, and go-to favorites, all of which are self-healing, extensively tested, and factory-backed. Decide what coverage you need, select your product and take any road with confidence.
-            </p>
-          </div>
-          <div className="grid grid-cols-3 gap-4">
-            {[
-            { value: '10yr', label: 'Warranty' },
-            { value: '6', label: 'Film Variants' },
-            { value: '25+', label: 'Years in Kuwait' }].
-            map((stat) =>
-            <div key={stat.label} className="border border-white/10 p-6 text-center">
-                <div className="text-3xl font-display font-light text-white">{stat.value}</div>
-                <div className="text-[10px] tracking-widest text-white/30 uppercase mt-2">{stat.label}</div>
+      {/* What is PPF */}
+      <section className="bg-[#FAFAF8] py-20 lg:py-28">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="section-label">What is PPF?</span>
+              <h2 className="mt-3 font-display font-light text-[#1A1A1A] leading-tight mb-6" style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
+                The Invisible<br />
+                <span className="italic text-[#6B6560]">Shield</span>
+              </h2>
+              <p className="text-base text-[#1A1A1A] leading-relaxed mb-4">
+                Paint Protection Film is a virtually invisible urethane film applied to your vehicle's painted surfaces. It acts as a sacrificial barrier — absorbing impacts, resisting scratches, and protecting your paint from the road's daily assault.
+              </p>
+              <p className="text-sm text-[#6B6560] leading-relaxed mb-8">
+                LLumar PPF features self-healing technology — minor surface scratches disappear with heat exposure, keeping the film looking pristine. The hydrophobic surface repels water and contaminants, making maintenance effortless.
+              </p>
+              <div className="grid grid-cols-2 gap-3">
+                {['Self-Healing', 'Hydrophobic', 'Impact Resistant', 'UV Stable', 'Optically Clear', 'Long-lasting'].map((f) =>
+                <div key={f} className="flex items-center gap-2.5">
+                    <span className="w-1 h-1 bg-[#CC0000] rounded-full flex-shrink-0" />
+                    <span className="text-sm text-[#1A1A1A]">{f}</span>
+                  </div>
+                )}
               </div>
-            )}
+            </div>
+            <div className="relative h-80 lg:h-[500px] overflow-hidden bg-[#1A1A1A]">
+              <AppImage
+                src="https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/ppf/llumar-ppf-installation.jpg"
+                alt="Close-up of LLumar PPF being professionally applied to a vehicle"
+                fill
+                className="object-cover" />
+
+            </div>
           </div>
         </div>
       </section>
 
       {/* Products */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-10 pb-24">
-        <h2 className="text-3xl font-display font-light text-white mb-12 tracking-tight">
-          Our PPF Products
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
-          {products.map((product) =>
-          <div key={product.name} className="bg-black p-8 group hover:bg-white/3 transition-colors duration-300 relative">
-              <div className="absolute top-6 right-6">
-                <span className="text-[9px] tracking-widest text-[#C9A84C] border border-[#C9A84C]/30 px-2 py-1 uppercase">{product.badge}</span>
+      <section className="bg-[#F5F0EA] py-20 lg:py-28">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <span className="section-label">Finish Options</span>
+          <h2 className="mt-3 font-display font-light text-[#1A1A1A] leading-tight mb-14" style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
+            Choose Your<br />
+            <span className="italic text-[#6B6560]">Finish</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#E0DBD5]">
+            {ppfProducts.map((product, i) =>
+            <div key={product.id} className="bg-[#F5F0EA] p-10 lg:p-12 hover:bg-white transition-colors duration-300">
+                <div className="text-[10px] tracking-[0.4em] text-[#CC0000] uppercase font-semibold mb-3">0{i + 1}</div>
+                <h3 className="text-2xl font-display font-light text-[#1A1A1A] mb-2">{product.name}</h3>
+                <p className="text-sm font-medium text-[#1A1A1A] mb-4">{product.tagline}</p>
+                <p className="text-sm text-[#6B6560] leading-relaxed mb-8">{product.desc}</p>
+                <div className="grid grid-cols-2 gap-2">
+                  {product.features.map((f) =>
+                <div key={f} className="flex items-center gap-2">
+                      <span className="w-1 h-1 bg-[#CC0000] rounded-full flex-shrink-0" />
+                      <span className="text-xs text-[#6B6560]">{f}</span>
+                    </div>
+                )}
+                </div>
               </div>
-              <h3 className="text-xl font-display font-light text-white mb-1">{product.name}</h3>
-              <p className="text-xs text-[#C9A84C] tracking-wider mb-4">{product.tagline}</p>
-              <p className="text-sm text-white/40 leading-relaxed mb-6">{product.description}</p>
-              <ul className="flex flex-col gap-2">
-                {product.features.map((feat) =>
-              <li key={feat} className="flex items-center gap-2 text-xs text-white/40">
-                    <span className="w-1 h-1 bg-[#C9A84C] rounded-full flex-shrink-0" />
-                    {feat}
-                  </li>
-              )}
-              </ul>
-            </div>
-          )}
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Coverage */}
+      <section className="bg-[#FAFAF8] py-20 lg:py-28">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <span className="section-label">Coverage Options</span>
+          <h2 className="mt-3 font-display font-light text-[#1A1A1A] leading-tight mb-14" style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
+            Protect What<br />
+            <span className="italic text-[#6B6560]">Matters Most</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-[#E0DBD5]">
+            {coverageOptions.map((opt, i) =>
+            <div key={opt.title} className="bg-[#FAFAF8] p-8 hover:bg-white transition-colors duration-300">
+                <div className="text-[10px] tracking-[0.4em] text-[#CC0000] uppercase font-semibold mb-3">0{i + 1}</div>
+                <h3 className="text-lg font-display font-light text-[#1A1A1A] mb-3">{opt.title}</h3>
+                <p className="text-sm text-[#6B6560] leading-relaxed">{opt.desc}</p>
+              </div>
+            )}
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="border-t border-white/10 py-20">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-light text-white mb-4">Ready to protect your paint?</h2>
-          <p className="text-sm text-white/40 mb-8">Book your PPF installation at either of our Kuwait showrooms.</p>
-          <Link href="/#booking" className="inline-flex items-center gap-3 bg-[#C9A84C] text-black text-xs font-semibold tracking-widest uppercase px-8 py-4 hover:bg-[#E8C96A] transition-colors duration-300">
-            Book Installation
-          </Link>
+      <section className="bg-[#1A1A1A] py-20">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 text-center">
+          <span className="section-label" style={{ color: '#CC0000' }}>Protect Your Vehicle</span>
+          <h2 className="mt-4 font-display font-light text-white leading-tight mb-6" style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
+            Book Your PPF Installation
+          </h2>
+          <p className="text-sm text-white/45 mb-10 max-w-[400px] mx-auto leading-relaxed">
+            Contact LLumar Kuwait to discuss your PPF requirements and book a professional installation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://wa.me/96565008585?text=I'm interested in paint protection film (PPF) for my vehicle." target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white text-[11px] font-semibold tracking-[0.2em] uppercase px-8 py-4 hover:bg-[#1DA851] transition-colors duration-300">
+              Book via WhatsApp
+            </a>
+            <Link href="/contact" className="inline-flex items-center justify-center gap-3 border border-white/30 text-white text-[11px] font-semibold tracking-[0.2em] uppercase px-8 py-4 hover:bg-white/10 transition-colors duration-300">
+              Contact Us
+            </Link>
+          </div>
         </div>
       </section>
 

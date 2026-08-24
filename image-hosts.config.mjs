@@ -23,4 +23,8 @@ export const imageHosts = [
         protocol: 'https',
         hostname: 'llumarkuwait.com',
     },
+    {
+        protocol: 'https',
+        hostname: 'llumar.com',
+    },
 ];
