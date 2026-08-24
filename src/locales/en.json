@@ -1,0 +1,690 @@
+{
+    "nav": {
+        "home": "Home",
+        "automotive": "Automotive",
+        "architectural": "Architectural",
+        "paintProtection": "Paint Protection",
+        "about": "About",
+        "gallery": "Gallery",
+        "resources": "Resources",
+        "contact": "Contact",
+        "bookNow": "Book Now",
+        "whatsapp": "WhatsApp",
+        "explore": "Explore",
+        "automotive_items": {
+            "windowTint": "Window Tint",
+            "windowTintDesc": "Ceramic, metallized & dyed films",
+            "ceramicTint": "Ceramic Tint",
+            "ceramicTintDesc": "Maximum heat rejection technology",
+            "ppf": "Paint Protection Film",
+            "ppfDesc": "Self-healing PPF for your finish",
+            "formulaOne": "FormulaOne by LLumar",
+            "formulaOneDesc": "LLumar's flagship tint line",
+            "windshield": "Windshield Protection",
+            "windshieldDesc": "Clarity and UV protection"
+        },
+        "architectural_items": {
+            "residential": "Residential",
+            "residentialDesc": "Comfort, privacy & UV control",
+            "commercial": "Commercial",
+            "commercialDesc": "Solar control & energy efficiency",
+            "safety": "Safety & Security",
+            "safetyDesc": "Glass fragment containment",
+            "decorative": "Decorative & Privacy",
+            "decorativeDesc": "Design-forward film solutions",
+            "solarControl": "Solar Control",
+            "solarControlDesc": "Reduce heat, preserve views"
+        },
+        "ppf_items": {
+            "overview": "PPF Overview",
+            "overviewDesc": "Why PPF matters",
+            "gloss": "Gloss PPF",
+            "glossDesc": "Crystal-clear gloss finish",
+            "matte": "Matte PPF",
+            "matteDesc": "Satin matte protection",
+            "coverage": "Coverage Options",
+            "coverageDesc": "Partial to full-body coverage"
+        }
+    },
+    "topBar": {
+        "hours": "8:30 AM \u2013 7:30 PM",
+        "hotline": "Hotline: 1886660"
+    },
+    "hero": {
+        "eyebrow": "Kuwait's Exclusive LLumar Distributor Since 2000",
+        "headline1": "Engineered",
+        "headline2": "to Protect.",
+        "subline": "Precision window film and paint protection for vehicles and architecture. Installed by Kuwait's most experienced team.",
+        "cta1": "Explore Automotive",
+        "cta2": "Contact LLumar Kuwait",
+        "stat1Value": "25+",
+        "stat1Label": "Years in Kuwait",
+        "stat2Value": "2",
+        "stat2Label": "Showrooms",
+        "stat3Value": "2000",
+        "stat3Label": "Established",
+        "scroll": "Scroll",
+        "brandAccentAr": "\u0644\u0648\u0645\u0627\u0631 \u0627\u0644\u0643\u0648\u064a\u062a",
+        "taglineAr": "\u0645\u0635\u0645\u0651\u0645 \u0644\u0644\u062d\u0645\u0627\u064a\u0629."
+    },
+    "heritage": {
+        "label": "The LLumar Difference",
+        "yearsValue": "25+",
+        "yearsLabel": "Years of Experience",
+        "body1": "One uncompromising standard. Since 2000, LLumar Kuwait has set the benchmark for professional film installation in the region \u2014 combining global LLumar technology with deep local expertise.",
+        "body2": "Every installation is performed by trained technicians using authentic LLumar films \u2014 the same technology trusted by professionals across 100+ countries.",
+        "stats": [
+            {
+                "value": "25+",
+                "label": "Years of Experience",
+                "detail": "Serving Kuwait since 2000"
+            },
+            {
+                "value": "65+",
+                "label": "Years of LLumar Technology",
+                "detail": "Global film engineering expertise"
+            },
+            {
+                "value": "2",
+                "label": "Kuwait Showrooms",
+                "detail": "Shuwaikh & Al Rai"
+            },
+            {
+                "value": "#1",
+                "label": "Film Installer in Kuwait",
+                "detail": "Exclusive authorized distributor"
+            }
+        ]
+    },
+    "windowTint": {
+        "label": "Automotive Window Tint",
+        "headline1": "Engineered Comfort",
+        "headline2": "for Every Drive.",
+        "subline": "LLumar automotive window films reduce heat, block UV rays and enhance privacy \u2014 engineered for Kuwait's demanding climate.",
+        "benefitsLabel": "Benefits",
+        "techLabel": "Technology",
+        "benefits": [
+            {
+                "label": "Heat Rejection",
+                "detail": "Block significant solar heat before it enters the cabin."
+            },
+            {
+                "label": "UV Protection",
+                "detail": "Up to 99% of harmful UV rays blocked \u2014 protecting skin and interior."
+            },
+            {
+                "label": "Glare Reduction",
+                "detail": "Reduce eye strain on Kuwait's sun-intense roads."
+            },
+            {
+                "label": "Comfort",
+                "detail": "A cooler, more comfortable drive in every condition."
+            },
+            {
+                "label": "Privacy",
+                "detail": "Controlled visibility \u2014 without compromising outward clarity."
+            }
+        ],
+        "technologies": [
+            {
+                "id": "ceramic",
+                "title": "Ceramic",
+                "headline": "Maximum heat rejection without signal interference.",
+                "desc": "LLumar ceramic films use nano-ceramic particles to block up to 99% of UV rays and reject significant solar heat \u2014 without affecting mobile or GPS signals.",
+                "benefits": [
+                    "Up to 99% UV rejection",
+                    "No signal interference",
+                    "Color-stable over time",
+                    "Scratch-resistant coating"
+                ]
+            },
+            {
+                "id": "metallized",
+                "title": "Metallized",
+                "headline": "High performance with a distinctive finish.",
+                "desc": "Metallized films use a thin metallic layer to reflect solar energy, delivering strong heat rejection and a sleek, reflective appearance.",
+                "benefits": [
+                    "Strong solar heat rejection",
+                    "Reflective finish",
+                    "Enhanced privacy",
+                    "Durable construction"
+                ]
+            },
+            {
+                "id": "dyed",
+                "title": "Dyed",
+                "headline": "Reliable protection at an accessible level.",
+                "desc": "Dyed films absorb solar energy to reduce glare and heat. An effective solution for privacy and comfort at a practical price point.",
+                "benefits": [
+                    "Glare reduction",
+                    "Privacy enhancement",
+                    "UV protection",
+                    "Non-reflective appearance"
+                ]
+            }
+        ],
+        "tintLevels": [
+            {
+                "id": "clear",
+                "label": "Clear",
+                "desc": "No tint \u2014 full light transmission. Maximum visibility, zero protection."
+            },
+            {
+                "id": "light",
+                "label": "Light",
+                "desc": "20\u201335% VLT. Subtle tint with meaningful heat and UV reduction."
+            },
+            {
+                "id": "medium",
+                "label": "Medium",
+                "desc": "15\u201320% VLT. Balanced privacy, heat rejection and glare control."
+            },
+            {
+                "id": "dark",
+                "label": "Dark",
+                "desc": "5% VLT. Maximum privacy and heat rejection for Kuwait's intense sun."
+            }
+        ],
+        "cta": "Explore Window Tint",
+        "learnMore": "Learn More"
+    },
+    "ppf": {
+        "label": "Paint Protection Film",
+        "headline1": "Preserve the Finish.",
+        "headline2": "Let the Road Take the Impact.",
+        "subline": "LLumar PPF is a virtually invisible protective layer that shields your paint from stone chips, scratches and environmental damage.",
+        "phases": [
+            {
+                "num": "01",
+                "title": "PROTECT",
+                "body": "Preserve the finish from everyday road exposure."
+            },
+            {
+                "num": "02",
+                "title": "PRESERVE",
+                "body": "Help maintain the appearance of the paint."
+            },
+            {
+                "num": "03",
+                "title": "PERFORM",
+                "body": "Advanced film technology engineered for the road."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Self-Healing",
+                "desc": "Minor scratches disappear with heat exposure. The film restores itself."
+            },
+            {
+                "title": "Hydrophobic",
+                "desc": "Water beads and rolls off the surface, carrying contaminants with it."
+            },
+            {
+                "title": "Impact Resistant",
+                "desc": "Absorbs road debris, stone chips, and minor impacts before they reach the paint."
+            },
+            {
+                "title": "UV Stable",
+                "desc": "Resists yellowing and maintains optical clarity over years of use."
+            }
+        ],
+        "finishes": [
+            {
+                "id": "gloss",
+                "label": "Gloss",
+                "desc": "Crystal-clear protection that enhances your paint's depth and shine."
+            },
+            {
+                "id": "matte",
+                "label": "Matte",
+                "desc": "Transforms gloss paint to a premium satin finish while protecting it."
+            }
+        ],
+        "finishesLabel": "Available Finishes",
+        "cta": "Explore PPF",
+        "learnMore": "Learn More"
+    },
+    "architectural": {
+        "label": "Architectural Films",
+        "headline1": "Every Space.",
+        "headline2": "Every Application.",
+        "subline": "From residential comfort to commercial solar control \u2014 LLumar architectural films address every challenge that glass presents.",
+        "transitionFrom": "From Automotive",
+        "transitionTo": "to Architectural",
+        "categories": [
+            {
+                "id": "residential",
+                "title": "Residential",
+                "desc": "Comfort, privacy and UV protection for your home. Reduce heat and glare without sacrificing natural light."
+            },
+            {
+                "id": "commercial",
+                "title": "Commercial",
+                "desc": "Solar control, privacy and safety solutions for offices, retail and commercial properties."
+            },
+            {
+                "id": "safety",
+                "title": "Safety & Security",
+                "desc": "Glass fragment containment film that holds shattered glass in place \u2014 protecting people and property."
+            },
+            {
+                "id": "decorative",
+                "title": "Decorative & Privacy",
+                "desc": "Transform glass into a design element. Patterns, gradients and privacy solutions for any space."
+            }
+        ],
+        "learnMore": "Learn More",
+        "categoryLabel": "Architectural"
+    },
+    "gallery": {
+        "label": "Selected Work",
+        "headline1": "Precision.",
+        "headline2": "Every Installation.",
+        "viewAll": "View Full Gallery",
+        "items": [
+            {
+                "category": "Automotive",
+                "title": "Ceramic Tint Installation"
+            },
+            {
+                "category": "PPF",
+                "title": "Full-Body PPF"
+            },
+            {
+                "category": "Architectural",
+                "title": "Residential Installation"
+            },
+            {
+                "category": "Commercial",
+                "title": "Office Solar Control"
+            },
+            {
+                "category": "Automotive",
+                "title": "FormulaOne Tint"
+            }
+        ]
+    },
+    "booking": {
+        "label": "Book an Appointment",
+        "headline": "Start Your Installation",
+        "subline": "Select a service and branch \u2014 we'll connect you directly via WhatsApp.",
+        "step1": "Select Service",
+        "step2": "Select Branch",
+        "step3": "Connect",
+        "services": [
+            {
+                "id": "automotive",
+                "label": "Automotive Tint"
+            },
+            {
+                "id": "ppf",
+                "label": "Paint Protection Film"
+            },
+            {
+                "id": "architectural",
+                "label": "Architectural Film"
+            },
+            {
+                "id": "safety",
+                "label": "Safety & Security"
+            }
+        ],
+        "branches": [
+            {
+                "id": "shuwaikh",
+                "name": "Shuwaikh Showroom",
+                "area": "Shuwaikh Industrial Area"
+            },
+            {
+                "id": "alrai",
+                "name": "Al Rai Showroom",
+                "area": "Al Ghazali Street, Al Rai"
+            }
+        ],
+        "connectCta": "Connect via WhatsApp",
+        "back": "Back",
+        "next": "Next",
+        "waMessage": "Hello LLumar Kuwait,\n\nService: {service}\nBranch: {branch}\n\nI'd like to book an installation."
+    },
+    "contact": {
+        "label": "Visit Us",
+        "headline1": "Two Locations",
+        "headline2": "Across Kuwait",
+        "hours": "8:30 AM \u2013 7:30 PM",
+        "fullContact": "Full Contact Page",
+        "showroomLabel": "Showroom",
+        "whatsapp": "WhatsApp",
+        "directions": "Directions",
+        "contactPage": {
+            "label": "Get In Touch",
+            "headline1": "Contact",
+            "headline2": "LLumar Kuwait",
+            "subline": "Two showrooms across Kuwait. Visit us, call us, or send a message \u2014 we're here to help with any enquiry.",
+            "quickLabel": "Quick Contact",
+            "whatsappUs": "WhatsApp Us",
+            "showroomsLabel": "Our Showrooms",
+            "showroomsHeadline1": "Two Locations",
+            "showroomsHeadline2": "Across Kuwait",
+            "formLabel": "Send a Message",
+            "formHeadline": "Get in Touch",
+            "formSubline": "Fill out the form and we'll respond via WhatsApp. For immediate assistance, call or WhatsApp us directly.",
+            "nameLabel": "Your Name",
+            "namePlaceholder": "Your full name",
+            "emailLabel": "Email Address",
+            "emailPlaceholder": "your@email.com",
+            "subjectLabel": "Subject",
+            "messageLabel": "Message",
+            "messagePlaceholder": "Tell us about your project...",
+            "submitBtn": "Send via WhatsApp",
+            "successTitle": "Message Sent",
+            "successBody": "We'll respond via WhatsApp shortly.",
+            "subjects": [
+                "Automotive Film",
+                "Paint Protection Film",
+                "Architectural Film",
+                "Safety & Security Film",
+                "General Inquiry"
+            ]
+        }
+    },
+    "footer": {
+        "tagline": "Kuwait's exclusive LLumar distributor since 2000. The standard for window film installation in Kuwait.",
+        "automotive": "Automotive",
+        "architectural": "Architectural",
+        "company": "Company",
+        "contactLabel": "Contact",
+        "shuwaikh": "Shuwaikh",
+        "alRai": "Al Rai",
+        "hotline": "Hotline",
+        "copyright": "\u00a9 2025 LLumar Kuwait. All rights reserved. Exclusive distributor of LLumar\u00ae films in Kuwait.",
+        "eastman": "An Eastman Performance Films brand",
+        "links": {
+            "automotive": [
+                {
+                    "label": "Window Tint",
+                    "href": "/automotive/window-tint"
+                },
+                {
+                    "label": "Ceramic Tint",
+                    "href": "/automotive/ceramic-tint"
+                },
+                {
+                    "label": "Paint Protection Film",
+                    "href": "/automotive/paint-protection-film"
+                },
+                {
+                    "label": "FormulaOne by LLumar",
+                    "href": "/automotive/formulaone"
+                },
+                {
+                    "label": "Windshield Protection",
+                    "href": "/automotive/windshield"
+                }
+            ],
+            "architectural": [
+                {
+                    "label": "Residential",
+                    "href": "/architectural/residential"
+                },
+                {
+                    "label": "Commercial",
+                    "href": "/architectural/commercial"
+                },
+                {
+                    "label": "Safety & Security",
+                    "href": "/architectural/safety-security"
+                },
+                {
+                    "label": "Decorative & Privacy",
+                    "href": "/architectural/decorative"
+                },
+                {
+                    "label": "Solar Control",
+                    "href": "/architectural/solar-control"
+                }
+            ],
+            "company": [
+                {
+                    "label": "About LLumar Kuwait",
+                    "href": "/about"
+                },
+                {
+                    "label": "Gallery & Projects",
+                    "href": "/gallery"
+                },
+                {
+                    "label": "Resources",
+                    "href": "/resources"
+                },
+                {
+                    "label": "Contact Us",
+                    "href": "/contact"
+                }
+            ]
+        }
+    },
+    "about": {
+        "label": "Since 2000",
+        "headline1": "About",
+        "headline2": "LLumar Kuwait",
+        "storyLabel": "Our Story",
+        "storyHeadline": "Kuwait's Standard for Window Film",
+        "storyBody1": "Since 2000, LLumar Kuwait has been the exclusive authorized distributor of LLumar\u00ae films in Kuwait. What began as a commitment to bringing world-class window film technology to the region has grown into Kuwait's most trusted name in professional film installation.",
+        "storyBody2": "We operate two fully equipped showrooms \u2014 in Shuwaikh and Al Rai \u2014 staffed by certified technicians with decades of combined experience. Every installation reflects our commitment to precision, quality and lasting performance.",
+        "pillarsLabel": "Our Standards",
+        "pillarsHeadline": "What Sets LLumar Kuwait Apart",
+        "pillars": [
+            {
+                "num": "01",
+                "title": "Engineered Performance",
+                "desc": "Every LLumar film is manufactured to precise engineering standards \u2014 tested for heat rejection, UV blocking, optical clarity and long-term durability in extreme conditions."
+            },
+            {
+                "num": "02",
+                "title": "Exclusive Distributor",
+                "desc": "LLumar Kuwait is the only authorized LLumar distributor in Kuwait. Every film we install is authentic \u2014 backed by LLumar's global quality standards and warranty."
+            },
+            {
+                "num": "03",
+                "title": "Professional Installation",
+                "desc": "Our certified technicians have installed thousands of vehicles and properties across Kuwait. Precision application is what separates a premium result from an ordinary one."
+            },
+            {
+                "num": "04",
+                "title": "Kuwait Expertise",
+                "desc": "We understand Kuwait's unique climate, regulations and market. Our recommendations are based on 25+ years of local experience \u2014 not generic advice."
+            }
+        ],
+        "servicesLabel": "Our Services",
+        "servicesHeadline": "Complete Film Solutions",
+        "services": [
+            "Automotive Window Tint",
+            "Ceramic Tint",
+            "Paint Protection Film",
+            "FormulaOne by LLumar",
+            "Windshield Protection",
+            "Residential Window Film",
+            "Commercial Window Film",
+            "Safety & Security Film",
+            "Decorative Films",
+            "Privacy Films",
+            "Solar Control Film",
+            "Architectural Films"
+        ],
+        "ctaLabel": "Ready to Start?",
+        "ctaHeadline": "Visit a Showroom",
+        "ctaBody": "Our team is ready to advise on the right solution for your vehicle or property.",
+        "ctaBtn": "Contact Us"
+    },
+    "resources": {
+        "label": "Knowledge Base",
+        "headline1": "Resources &",
+        "headline2": "Information",
+        "subline": "Product guides, care instructions, warranty information and answers to common questions.",
+        "categories": [
+            {
+                "category": "Product Information",
+                "items": [
+                    {
+                        "title": "Automotive Film Overview",
+                        "desc": "Complete guide to LLumar automotive window tint technologies \u2014 ceramic, metallized and dyed films."
+                    },
+                    {
+                        "title": "PPF Product Guide",
+                        "desc": "Detailed information on LLumar paint protection film options, finishes and coverage."
+                    },
+                    {
+                        "title": "Architectural Film Guide",
+                        "desc": "Overview of LLumar architectural film solutions for residential and commercial applications."
+                    },
+                    {
+                        "title": "FormulaOne by LLumar",
+                        "desc": "Technical information on LLumar's flagship automotive tint line."
+                    }
+                ]
+            },
+            {
+                "category": "Care & Maintenance",
+                "items": [
+                    {
+                        "title": "Window Tint Care Guide",
+                        "desc": "How to clean and maintain your automotive window tint for long-lasting performance."
+                    },
+                    {
+                        "title": "PPF Maintenance",
+                        "desc": "Caring for your paint protection film \u2014 cleaning, maintenance and what to avoid."
+                    },
+                    {
+                        "title": "Architectural Film Care",
+                        "desc": "Maintaining your architectural window film for optimal performance and appearance."
+                    }
+                ]
+            },
+            {
+                "category": "Warranty & Quality",
+                "items": [
+                    {
+                        "title": "LLumar Warranty Information",
+                        "desc": "Understanding the warranty coverage for your LLumar film products."
+                    },
+                    {
+                        "title": "Quality Standards",
+                        "desc": "How LLumar films are tested and certified for performance and durability."
+                    },
+                    {
+                        "title": "Installation Standards",
+                        "desc": "LLumar Kuwait's installation process and quality assurance procedures."
+                    }
+                ]
+            },
+            {
+                "category": "FAQ",
+                "items": [
+                    {
+                        "title": "Automotive Tint FAQ",
+                        "desc": "Common questions about automotive window tint \u2014 legality, performance, installation and care."
+                    },
+                    {
+                        "title": "PPF FAQ",
+                        "desc": "Frequently asked questions about paint protection film."
+                    },
+                    {
+                        "title": "Architectural Film FAQ",
+                        "desc": "Common questions about residential and commercial window film."
+                    }
+                ]
+            }
+        ],
+        "faqLabel": "Frequently Asked Questions",
+        "faqs": [
+            {
+                "q": "Is window tint legal in Kuwait?",
+                "a": "Window tint regulations in Kuwait specify permitted VLT (visible light transmission) levels for different windows. Our team can advise on compliant tint options for your vehicle."
+            },
+            {
+                "q": "How long does window tint installation take?",
+                "a": "A standard automotive tint installation typically takes 2\u20134 hours depending on the vehicle. We recommend leaving your vehicle with us for the day to ensure a perfect result."
+            },
+            {
+                "q": "How long does PPF last?",
+                "a": "LLumar PPF is designed for long-term durability. With proper care, it can protect your vehicle's paint for many years. Specific warranty terms vary by product."
+            },
+            {
+                "q": "Can window film be removed?",
+                "a": "Yes. Window film can be professionally removed. We recommend professional removal to avoid damage to the glass or adhesive residue."
+            },
+            {
+                "q": "Do you offer a warranty on installations?",
+                "a": "Yes. LLumar films come with manufacturer warranties. Our team can provide specific warranty information for each product."
+            }
+        ],
+        "contactCta": "Have a specific question? Contact us directly.",
+        "contactBtn": "Contact LLumar Kuwait"
+    },
+    "galleryPage": {
+        "label": "Our Work",
+        "headline1": "Gallery &",
+        "headline2": "Projects",
+        "subline": "A selection of automotive, PPF and architectural installations across Kuwait.",
+        "categories": [
+            "All",
+            "Automotive",
+            "PPF",
+            "Residential",
+            "Commercial"
+        ],
+        "projects": [
+            {
+                "category": "Automotive",
+                "title": "Ceramic Tint \u2014 Luxury Sedan",
+                "desc": "Full ceramic tint installation with maximum heat rejection."
+            },
+            {
+                "category": "PPF",
+                "title": "Full-Body PPF \u2014 Sports Car",
+                "desc": "Complete paint protection film coverage in gloss finish."
+            },
+            {
+                "category": "Residential",
+                "title": "Solar Control \u2014 Villa",
+                "desc": "Residential solar control film for a Kuwait villa."
+            },
+            {
+                "category": "Commercial",
+                "title": "Office Building \u2014 Solar Control",
+                "desc": "Commercial solar control film for a Kuwait office building."
+            },
+            {
+                "category": "Automotive",
+                "title": "FormulaOne Tint \u2014 SUV",
+                "desc": "FormulaOne by LLumar premium tint installation."
+            },
+            {
+                "category": "PPF",
+                "title": "Partial PPF \u2014 Sedan",
+                "desc": "Front-end paint protection film installation."
+            },
+            {
+                "category": "Residential",
+                "title": "Privacy Film \u2014 Apartment",
+                "desc": "Decorative privacy film for a Kuwait apartment."
+            },
+            {
+                "category": "Commercial",
+                "title": "Safety Film \u2014 Office",
+                "desc": "Safety and security film installation for a commercial property."
+            }
+        ],
+        "ctaLabel": "Start Your Project",
+        "ctaHeadline": "Ready for Your Installation?",
+        "ctaBody": "Contact our team to discuss your automotive, PPF or architectural film requirements.",
+        "ctaBtn": "Get in Touch"
+    },
+    "safety": {
+        "label": "Safety & Security",
+        "headline1": "Protection",
+        "headline2": "Beyond Tint.",
+        "subline": "LLumar safety films hold shattered glass in place \u2014 reducing the risk of injury from glass fragments.",
+        "learnMore": "Learn More About Safety Film"
+    }
+}

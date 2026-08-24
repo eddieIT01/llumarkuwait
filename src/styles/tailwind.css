@@ -333,6 +333,31 @@
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
     opacity: 1;
   }
+
+  /* RTL: flip WhatsApp button to left side */
+  [dir="rtl"] .whatsapp-float-refined {
+    right: auto;
+    left: 1.75rem;
+  }
+
+  /* RTL: reveal-left becomes reveal-right */
+  [dir="rtl"] .reveal-left {
+    transform: translateX(40px);
+  }
+  [dir="rtl"] .reveal-left.in-view {
+    transform: translateX(0);
+  }
+
+  /* RTL: Arabic font rendering improvements */
+  [dir="rtl"] {
+    font-feature-settings: "kern" 1;
+  }
+
+  /* RTL: section-label tracking reset for Arabic */
+  [dir="rtl"] .section-label {
+    letter-spacing: 0.05em;
+  }
+
   /* Gallery editorial hover */
   .gallery-item-editorial {
     overflow: hidden;
