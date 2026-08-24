@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import AppImage from '@/components/ui/AppImage';
+
 
 const footerLinks = {
   automotive: [
@@ -33,12 +33,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12 mb-12">
           {/* Brand column */}
           <div>
-            <AppImage
+            <img
               src="/assets/images/IMG_8355-1787540282890.jpeg"
               alt="LLumar Kuwait official logo"
-              width={130}
-              height={44}
-              className="h-12 w-auto object-contain brightness-0 invert mb-5" />
+              style={{ height: '48px', width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)', marginBottom: '20px' }}
+            />
 
             <p className="text-sm text-white/45 leading-relaxed mb-6 max-w-[240px]">
               Kuwait's exclusive LLumar distributor since 2000. The standard for window film installation in Kuwait.
@@ -105,12 +104,11 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-[11px] text-white/25 tracking-wider">© 2025 LLumar Kuwait. All rights reserved. Exclusive distributor of LLumar® films in Kuwait.</p>
           <div className="flex items-center gap-2">
-            <AppImage
+            <img
               src="/assets/images/IMG_8359-1787540282171.jpeg"
               alt="LLumar brand symbol"
-              width={28}
-              height={28}
-              className="h-7 w-auto object-contain opacity-40 rounded-full" />
+              style={{ height: '28px', width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)', opacity: 0.5 }}
+            />
             <span className="text-[10px] text-white/20 tracking-wider ml-1">An Eastman Performance Films brand</span>
           </div>
         </div>

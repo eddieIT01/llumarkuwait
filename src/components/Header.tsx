@@ -136,13 +136,19 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0 z-10">
             {/* On transparent (home hero): show white/inverted logo; on solid header: show the red Kuwait logo */}
-            <AppImage
-              src={isTransparent ? '/assets/images/IMG_8359-1787540282171.jpeg' : '/assets/images/IMG_8355-1787540282890.jpeg'}
-              alt="LLumar Kuwait — official exclusive distributor"
-              width={140}
-              height={48}
-              className="h-10 w-auto object-contain transition-all duration-500"
-              priority />
+            {isTransparent ? (
+              <img
+                src="/assets/images/IMG_8359-1787540282171.jpeg"
+                alt="LLumar Kuwait — official exclusive distributor"
+                style={{ height: '40px', width: 'auto', mixBlendMode: 'screen', objectFit: 'contain', transition: 'all 0.5s' }}
+              />
+            ) : (
+              <img
+                src="/assets/images/IMG_8355-1787540282890.jpeg"
+                alt="LLumar Kuwait — official exclusive distributor"
+                style={{ height: '40px', width: 'auto', mixBlendMode: 'multiply', objectFit: 'contain', transition: 'all 0.5s' }}
+              />
+            )}
           </Link>
 
           {/* Desktop nav */}
@@ -259,12 +265,11 @@ export default function Header() {
       {/* Mobile full-screen menu */}
       <div className={`fixed inset-0 z-40 bg-[#FAFAF8] flex flex-col transition-all duration-500 lg:hidden ${mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         <div className="flex items-center justify-between px-6 py-4 border-b border-[#E0DBD5]">
-          <AppImage
-            src="https://llumarkuwait.com/wp-content/uploads/2024/09/LLumar-logo-e1727115848481.png"
+          <img
+            src="/assets/images/IMG_8355-1787540282890.jpeg"
             alt="LLumar Kuwait"
-            width={120}
-            height={40}
-            className="h-8 w-auto object-contain" />
+            style={{ height: '36px', width: 'auto', mixBlendMode: 'multiply', objectFit: 'contain' }}
+          />
 
           <button onClick={() => setMobileOpen(false)} className="p-2 text-[#1A1A1A]" aria-label="Close menu">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
