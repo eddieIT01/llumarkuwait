@@ -74,6 +74,53 @@ export default function MattePPFPage() {
         </div>
       </section>
 
+      {/* Official LLumar Matte Finish Visual */}
+      <section className="bg-[#F5F0EA] py-20 lg:py-28 overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="order-2 lg:order-1 relative">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <AppImage
+                  src="https://img.rocket.new/generatedImages/rocket_gen_img_1fd30418b-1782695650755.png"
+                  alt="LLumar Matte PPF official product shot — premium satin finish paint protection film on a vehicle"
+                  fill
+                  className="object-cover" />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <span className="text-[10px] tracking-[0.3em] text-white/80 uppercase font-semibold">LLumar® Matte PPF</span>
+                </div>
+              </div>
+              {/* Accent border */}
+              <div className="absolute -bottom-3 -left-3 w-full h-full border border-[#1A1A1A]/20 pointer-events-none" />
+            </div>
+            <div className="order-1 lg:order-2">
+              <span className="section-label" style={{ color: '#CC0000' }}>Official LLumar Product</span>
+              <h2 className="mt-3 font-display font-light text-[#1A1A1A] leading-tight mb-6" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)' }}>
+                The Matte Finish<br />
+                <span className="italic text-[#6B6560]">Up Close</span>
+              </h2>
+              <p className="text-sm text-[#6B6560] leading-relaxed mb-6 max-w-[420px]">
+                LLumar Matte PPF delivers a velvety, non-reflective satin surface that transforms any gloss paint into a premium factory-matte look — without the cost or permanence of a matte respray.
+              </p>
+              <ul className="flex flex-col gap-3">
+                {[
+                'Velvety satin, zero glare',
+                'Consistent sheen across all panels',
+                'Transforms gloss paint instantly',
+                'Removable — restore original finish anytime'].
+                map((item) =>
+                <li key={item} className="flex items-center gap-3 text-sm text-[#4A4540]">
+                    <span className="w-1.5 h-1.5 bg-[#CC0000] rounded-full flex-shrink-0" />
+                    {item}
+                  </li>
+                )}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Compare finishes */}
       <section className="bg-[#F5F0EA] py-20 lg:py-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">

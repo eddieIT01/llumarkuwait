@@ -74,6 +74,53 @@ export default function GlossPPFPage() {
         </div>
       </section>
 
+      {/* Official LLumar Gloss Finish Visual */}
+      <section className="bg-[#1A1A1A] py-20 lg:py-28 overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <span className="section-label" style={{ color: '#CC0000' }}>Official LLumar Product</span>
+              <h2 className="mt-3 font-display font-light text-white leading-tight mb-6" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)' }}>
+                The Gloss Finish<br />
+                <span className="italic text-white/50">Up Close</span>
+              </h2>
+              <p className="text-sm text-white/55 leading-relaxed mb-6 max-w-[420px]">
+                LLumar Gloss PPF delivers a crystal-clear, high-shine surface that amplifies your paint's depth and color. The result is a finish that looks better than bare paint — with full protection underneath.
+              </p>
+              <ul className="flex flex-col gap-3">
+                {[
+                'Mirror-like reflective clarity',
+                'Zero orange-peel distortion',
+                'Enhances factory paint depth',
+                'Invisible seams with professional installation'].
+                map((item) =>
+                <li key={item} className="flex items-center gap-3 text-sm text-white/70">
+                    <span className="w-1.5 h-1.5 bg-[#CC0000] rounded-full flex-shrink-0" />
+                    {item}
+                  </li>
+                )}
+              </ul>
+            </div>
+            <div className="relative">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <AppImage
+                  src="https://img.rocket.new/generatedImages/rocket_gen_img_178098815-1772067502676.png"
+                  alt="LLumar Gloss PPF official product shot — high-shine crystal-clear paint protection film on a vehicle"
+                  fill
+                  className="object-cover" />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <span className="text-[10px] tracking-[0.3em] text-white/60 uppercase font-semibold">LLumar® Gloss PPF</span>
+                </div>
+              </div>
+              {/* Red accent border */}
+              <div className="absolute -bottom-3 -right-3 w-full h-full border border-[#CC0000]/30 pointer-events-none" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Compare finishes */}
       <section className="bg-[#F5F0EA] py-20 lg:py-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
