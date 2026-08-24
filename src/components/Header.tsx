@@ -135,18 +135,18 @@ export default function Header() {
         <nav className="flex items-center justify-between px-6 lg:px-10 py-4 max-w-[1400px] mx-auto">
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0 z-10">
-            {/* On transparent (home hero): show white/inverted logo; on solid header: show the red Kuwait logo */}
+            {/* On transparent (home hero): screen blend removes dark bg; on solid header: multiply removes white bg */}
             {isTransparent ? (
               <img
-                src="/assets/images/IMG_8359-1787540282171.jpeg"
+                src="/assets/images/9146FE91-3130-4BA1-9353-F4B2DC598CED-1787540957064.jpeg"
                 alt="LLumar Kuwait — official exclusive distributor"
-                style={{ height: '40px', width: 'auto', mixBlendMode: 'screen', objectFit: 'contain', transition: 'all 0.5s' }}
+                style={{ height: '44px', width: 'auto', mixBlendMode: 'screen', objectFit: 'contain', transition: 'all 0.5s' }}
               />
             ) : (
               <img
-                src="/assets/images/IMG_8355-1787540282890.jpeg"
+                src="/assets/images/9146FE91-3130-4BA1-9353-F4B2DC598CED-1787540957064.jpeg"
                 alt="LLumar Kuwait — official exclusive distributor"
-                style={{ height: '40px', width: 'auto', mixBlendMode: 'multiply', objectFit: 'contain', transition: 'all 0.5s' }}
+                style={{ height: '44px', width: 'auto', mixBlendMode: 'multiply', objectFit: 'contain', transition: 'all 0.5s' }}
               />
             )}
           </Link>

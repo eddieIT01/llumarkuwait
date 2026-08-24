@@ -34,7 +34,7 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <img
-              src="/assets/images/IMG_8355-1787540282890.jpeg"
+              src="/assets/images/9146FE91-3130-4BA1-9353-F4B2DC598CED-1787540957064.jpeg"
               alt="LLumar Kuwait official logo"
               style={{ height: '48px', width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)', marginBottom: '20px' }}
             />
@@ -105,7 +105,7 @@ export default function Footer() {
           <p className="text-[11px] text-white/25 tracking-wider">© 2025 LLumar Kuwait. All rights reserved. Exclusive distributor of LLumar® films in Kuwait.</p>
           <div className="flex items-center gap-2">
             <img
-              src="/assets/images/IMG_8359-1787540282171.jpeg"
+              src="/assets/images/9146FE91-3130-4BA1-9353-F4B2DC598CED-1787540957064.jpeg"
               alt="LLumar brand symbol"
               style={{ height: '28px', width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)', opacity: 0.5 }}
             />
