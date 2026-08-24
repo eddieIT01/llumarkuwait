@@ -311,28 +311,59 @@
     transform: scale(1.1);
     box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
   }
-  /* Gallery hover */
-  .gallery-item {
+  /* WhatsApp float — refined, less dominant */
+  .whatsapp-float-refined {
+    position: fixed;
+    bottom: 1.75rem;
+    right: 1.75rem;
+    z-index: 100;
+    width: 42px;
+    height: 42px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 12px rgba(37, 211, 102, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+    opacity: 0.85;
+  }
+  .whatsapp-float-refined:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    opacity: 1;
+  }
+  /* Gallery editorial hover */
+  .gallery-item-editorial {
     overflow: hidden;
     position: relative;
   }
-  .gallery-item img {
-    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  .gallery-item-editorial img {
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .gallery-item:hover img {
-    transform: scale(1.06);
+  .gallery-item-editorial:hover img {
+    transform: scale(1.0) !important;
   }
-  .gallery-item .gallery-overlay {
+  .gallery-editorial-overlay {
     position: absolute;
     inset: 0;
     background: rgba(10,10,10,0);
-    transition: background 0.4s ease;
+    transition: background 0.5s ease;
     display: flex;
     align-items: flex-end;
     padding: 1.5rem;
   }
-  .gallery-item:hover .gallery-overlay {
+  .gallery-item-editorial:hover .gallery-editorial-overlay {
     background: rgba(10,10,10,0.5);
+  }
+  .gallery-editorial-overlay > div {
+    transform: translateY(8px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  .gallery-item-editorial:hover .gallery-editorial-overlay > div {
+    transform: translateY(0);
+    opacity: 1;
   }
   /* Booking step */
   .booking-option {
