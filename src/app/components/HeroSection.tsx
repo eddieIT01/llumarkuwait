@@ -28,12 +28,11 @@ export default function HeroSection() {
       {/* Background image with parallax */}
       <div ref={imgRef} className="absolute inset-0 will-change-transform" style={{ transform: 'scale(1.08)' }}>
         <AppImage
-          src="https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/automotive/llumar-automotive-tint-hero.jpg"
+          src="https://img.rocket.new/generatedImages/rocket_gen_img_108242f7a-1779492497419.png"
           alt="Premium LLumar automotive window tint on a luxury vehicle in Kuwait"
           fill
           className="object-cover object-center"
           priority />
-
       </div>
       {/* Gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/10" />

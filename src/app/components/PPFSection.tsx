@@ -40,7 +40,7 @@ export default function PPFSection() {
           className="reveal-up relative h-[60vh] min-h-[400px] overflow-hidden mb-16">
 
           <AppImage
-            src="https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/ppf/llumar-ppf-installation.jpg"
+            src="https://img.rocket.new/generatedImages/rocket_gen_img_1e1dbdbd7-1772741557374.png"
             alt="Professional LLumar paint protection film being applied to a vehicle hood"
             fill
             className="object-cover" />

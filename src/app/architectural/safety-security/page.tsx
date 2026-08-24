@@ -27,7 +27,7 @@ export default function SafetySecurityPage() {
       {/* Hero */}
       <section className="relative w-full h-[65vh] min-h-[500px] overflow-hidden bg-[#1A1A1A] flex items-end">
         <AppImage
-          src="https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/architectural/llumar-safety-security.jpg"
+          src="https://img.rocket.new/generatedImages/rocket_gen_img_10a1d8104-1787540512223.png"
           alt="LLumar safety and security window film holding glass fragments together"
           fill
           className="object-cover opacity-55"

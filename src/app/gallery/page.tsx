@@ -18,7 +18,7 @@ const projects = [
   category: 'Automotive',
   title: 'Ceramic Tint — Luxury Sedan',
   desc: 'Full ceramic tint installation with maximum heat rejection.',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1a78f5bcd-1787540188653.png",
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1a76a361b-1768736886730.png",
   alt: 'LLumar ceramic window tint installed on a luxury sedan',
   span: 'col-span-2 row-span-2'
 },
@@ -27,7 +27,7 @@ const projects = [
   category: 'PPF',
   title: 'Full-Body PPF — Sports Car',
   desc: 'Complete paint protection film coverage in gloss finish.',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1f7059860-1765215518463.png",
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_17a8a8aca-1787540513262.png",
   alt: 'Full-body LLumar paint protection film on a sports car',
   span: 'col-span-1 row-span-1'
 },
@@ -36,7 +36,7 @@ const projects = [
   category: 'Residential',
   title: 'Solar Control — Villa',
   desc: 'Residential solar control film for a Kuwait villa.',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_18a1153fe-1787540189038.png",
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_18ba98f0f-1787540513492.png",
   alt: 'LLumar residential window film in a modern Kuwait villa',
   span: 'col-span-1 row-span-1'
 },
@@ -45,7 +45,7 @@ const projects = [
   category: 'Commercial',
   title: 'Office Building — Solar Control',
   desc: 'Commercial solar control film for a Kuwait office building.',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_118af4ef7-1787540188300.png",
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1f05c3501-1787540513277.png",
   alt: 'LLumar commercial window film on a Kuwait office building',
   span: 'col-span-1 row-span-1'
 },
@@ -54,7 +54,7 @@ const projects = [
   category: 'Automotive',
   title: 'FormulaOne Tint — SUV',
   desc: 'FormulaOne by LLumar premium tint installation.',
-  image: 'https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/automotive/llumar-formulaone.jpg',
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_10348bf81-1787540513217.png",
   alt: 'FormulaOne by LLumar tint on a luxury SUV',
   span: 'col-span-1 row-span-1'
 },

@@ -9,7 +9,7 @@ const archCategories = [
   title: 'Residential',
   desc: 'Comfort, privacy and UV protection for your home. Reduce heat and glare without sacrificing natural light.',
   href: '/architectural/residential',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_14acbcfe3-1772104395054.png",
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_12cb6da1c-1772555229436.png",
   alt: 'Modern home interior with LLumar residential window film on large windows'
 },
 {
@@ -17,7 +17,7 @@ const archCategories = [
   title: 'Commercial',
   desc: 'Solar control, privacy and safety solutions for offices, retail and commercial properties.',
   href: '/architectural/commercial',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_17ed3e1fc-1787540187721.png",
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1ade036f9-1786290288813.png",
   alt: 'Modern commercial building with LLumar architectural window film'
 },
 {
@@ -25,7 +25,7 @@ const archCategories = [
   title: 'Safety & Security',
   desc: 'Glass fragment containment film that holds shattered glass in place — protecting people and property.',
   href: '/architectural/safety-security',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1be4036eb-1787540188898.png",
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_18da24a61-1787540513538.png",
   alt: 'LLumar safety and security window film demonstration on glass panel'
 },
 {
@@ -33,7 +33,7 @@ const archCategories = [
   title: 'Decorative & Privacy',
   desc: 'Transform glass into a design element. Patterns, gradients and privacy solutions for any space.',
   href: '/architectural/decorative',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_190f3f111-1787540187931.png",
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1e4657528-1787540513278.png",
   alt: 'Decorative LLumar window film creating elegant privacy patterns on office glass'
 }];
 

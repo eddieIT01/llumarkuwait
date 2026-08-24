@@ -54,7 +54,7 @@ export default function WindowTintPage() {
       {/* Hero */}
       <section className="relative w-full h-[65vh] min-h-[500px] overflow-hidden bg-[#1A1A1A] flex items-end">
         <AppImage
-          src="https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/automotive/llumar-automotive-tint-hero.jpg"
+          src="https://img.rocket.new/generatedImages/rocket_gen_img_14fc7d923-1769683718381.png"
           alt="LLumar premium automotive window tint on a luxury vehicle"
           fill
           className="object-cover opacity-60"

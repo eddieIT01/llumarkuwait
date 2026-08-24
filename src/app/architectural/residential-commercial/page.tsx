@@ -17,7 +17,7 @@ const categories = [
   tagline: 'Your home. Your comfort. Your control.',
   desc: 'LLumar residential window films reduce heat, block UV rays and enhance privacy — without sacrificing natural light or views. Designed for Kuwait\'s intense sun and high temperatures.',
   benefits: ['Heat reduction', 'UV protection', 'Glare control', 'Privacy options', 'Interior protection', 'Energy comfort'],
-  image: 'https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/architectural/llumar-architectural-residential-hero.jpg',
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1aa20e330-1787540512459.png",
   alt: 'Modern Kuwait home interior with LLumar residential window film on large glass windows',
   href: '/architectural/residential'
 },
@@ -27,7 +27,7 @@ const categories = [
   tagline: 'Productive spaces. Controlled environments.',
   desc: 'LLumar commercial films address the unique challenges of office, retail and commercial spaces — solar control, privacy, safety and decorative applications for any building type.',
   benefits: ['Solar control', 'Occupant comfort', 'Privacy solutions', 'Safety compliance', 'Decorative options', 'Professional installation'],
-  image: 'https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/architectural/llumar-architectural-commercial.jpg',
+  image: "https://images.unsplash.com/photo-1720852995325-1a900165d118",
   alt: 'Modern commercial building with LLumar architectural window film on glass facade',
   href: '/architectural/commercial'
 }];
@@ -41,7 +41,7 @@ export default function ResidentialCommercialPage() {
       {/* Hero */}
       <section className="relative w-full h-[65vh] min-h-[500px] overflow-hidden bg-[#1A1A1A] flex items-end">
         <AppImage
-          src="https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/architectural/llumar-architectural-residential-hero.jpg"
+          src="https://images.unsplash.com/photo-1600294713980-acadd69119ae"
           alt="Modern interior with LLumar architectural window film"
           fill
           className="object-cover opacity-55"

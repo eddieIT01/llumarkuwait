@@ -34,11 +34,11 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <AppImage
-              src="https://llumarkuwait.com/wp-content/uploads/2024/09/LLumar-logo-e1727115848481.png"
+              src="/assets/images/IMG_8355-1787540282890.jpeg"
               alt="LLumar Kuwait official logo"
               width={130}
               height={44}
-              className="h-9 w-auto object-contain brightness-0 invert mb-5" />
+              className="h-12 w-auto object-contain brightness-0 invert mb-5" />
 
             <p className="text-sm text-white/45 leading-relaxed mb-6 max-w-[240px]">
               Kuwait's exclusive LLumar distributor since 2000. The standard for window film installation in Kuwait.
@@ -104,14 +104,13 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-[11px] text-white/25 tracking-wider">© 2025 LLumar Kuwait. All rights reserved. Exclusive distributor of LLumar® films in Kuwait.</p>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-2">
             <AppImage
-              src="https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/LL_Symbol_FullColor_RGB.png"
+              src="/assets/images/IMG_8359-1787540282171.jpeg"
               alt="LLumar brand symbol"
-              width={20}
-              height={20}
-              className="h-4 w-auto object-contain opacity-30" />
-
+              width={28}
+              height={28}
+              className="h-7 w-auto object-contain opacity-40 rounded-full" />
             <span className="text-[10px] text-white/20 tracking-wider ml-1">An Eastman Performance Films brand</span>
           </div>
         </div>

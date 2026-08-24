@@ -76,7 +76,7 @@ export default function WindowTintSection() {
             {/* Visual */}
             <div className="relative h-72 lg:h-auto overflow-hidden bg-[#1A1A1A]">
               <AppImage
-                src="https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/automotive/llumar-automotive-tint-hero.jpg"
+                src="https://img.rocket.new/generatedImages/rocket_gen_img_131b70dd0-1787540513236.png"
                 alt="LLumar automotive window tint visualization showing different tint levels"
                 fill
                 className="object-cover" />

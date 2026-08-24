@@ -11,7 +11,7 @@ const services = [
   tagline: 'Comfort, protection and presence — engineered for the road.',
   desc: 'From ceramic window tint to full-body paint protection, every LLumar automotive film is engineered for Kuwait\'s extreme climate.',
   href: '/automotive/window-tint',
-  image: 'https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/automotive/llumar-automotive-tint-hero.jpg',
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_189b8c592-1787540512679.png",
   alt: 'LLumar automotive window tint on a luxury sports car',
   cta: 'Explore Automotive'
 },
@@ -22,7 +22,7 @@ const services = [
   tagline: 'Preserve the finish. Let the road take the impact.',
   desc: 'Self-healing, hydrophobic, and virtually invisible. LLumar PPF protects your vehicle\'s paint from chips, scratches, and environmental damage.',
   href: '/automotive/paint-protection-film',
-  image: 'https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/ppf/llumar-ppf-installation.jpg',
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_178098815-1772067502676.png",
   alt: 'Professional LLumar paint protection film installation on a vehicle',
   cta: 'Explore PPF'
 },
@@ -32,8 +32,8 @@ const services = [
   title: 'Architectural Films',
   tagline: 'Transform your space. Control your environment.',
   desc: 'Residential and commercial window film solutions that reduce heat, block UV, enhance privacy, and elevate the aesthetic of any space.',
-  href: '/architectural/residential',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_15b0eb31f-1787540189116.png",
+  href: '/architectural/residential-commercial',
+  image: "https://images.unsplash.com/photo-1724588846681-3cf43f15c8d2",
   alt: 'Modern interior with LLumar architectural window film on large glass panels',
   cta: 'Explore Architectural'
 }];

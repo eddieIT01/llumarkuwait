@@ -42,7 +42,7 @@ export default function PPFPage() {
       {/* Hero */}
       <section className="relative w-full h-[65vh] min-h-[500px] overflow-hidden bg-[#1A1A1A] flex items-end">
         <AppImage
-          src="https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/ppf/llumar-ppf-installation.jpg"
+          src="https://img.rocket.new/generatedImages/rocket_gen_img_178098815-1772067502676.png"
           alt="Professional LLumar paint protection film installation on a vehicle"
           fill
           className="object-cover opacity-60"
@@ -89,7 +89,7 @@ export default function PPFPage() {
             </div>
             <div className="relative h-80 lg:h-[500px] overflow-hidden bg-[#1A1A1A]">
               <AppImage
-                src="https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/ppf/llumar-ppf-installation.jpg"
+                src="https://img.rocket.new/generatedImages/rocket_gen_img_178098815-1772067502676.png"
                 alt="Close-up of LLumar PPF being professionally applied to a vehicle"
                 fill
                 className="object-cover" />

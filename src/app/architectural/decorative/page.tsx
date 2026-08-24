@@ -27,7 +27,7 @@ export default function DecorativePage() {
       {/* Hero */}
       <section className="relative w-full h-[65vh] min-h-[500px] overflow-hidden bg-[#1A1A1A] flex items-end">
         <AppImage
-          src="https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/architectural/llumar-decorative-film.jpg"
+          src="https://img.rocket.new/generatedImages/rocket_gen_img_180f483a1-1787540513485.png"
           alt="Elegant LLumar decorative window film creating privacy patterns on office glass"
           fill
           className="object-cover opacity-55"
@@ -74,7 +74,7 @@ export default function DecorativePage() {
             </div>
             <div className="relative h-80 lg:h-[500px] overflow-hidden bg-[#1A1A1A]">
               <AppImage
-                src="https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/architectural/llumar-decorative-film.jpg"
+                src="https://img.rocket.new/generatedImages/rocket_gen_img_10f175cb4-1776271239152.png"
                 alt="LLumar decorative window film in a modern office space"
                 fill
                 className="object-cover" />

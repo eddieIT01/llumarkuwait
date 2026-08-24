@@ -23,7 +23,7 @@ const navItems: NavItem[] = [
   { label: 'FormulaOne by LLumar', href: '/automotive/formulaone', desc: 'LLumar\'s flagship tint line' },
   { label: 'Windshield Protection', href: '/automotive/windshield', desc: 'Clarity and UV protection' }],
 
-  megaImage: 'https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/automotive/llumar-automotive-tint-hero.jpg',
+  megaImage: "https://img.rocket.new/generatedImages/rocket_gen_img_1a76a361b-1768736886730.png",
   megaImageAlt: 'Premium LLumar automotive window tint on a luxury vehicle'
 },
 {
@@ -35,7 +35,7 @@ const navItems: NavItem[] = [
   { label: 'Decorative & Privacy', href: '/architectural/decorative', desc: 'Design-forward film solutions' },
   { label: 'Solar Control', href: '/architectural/solar-control', desc: 'Reduce heat, preserve views' }],
 
-  megaImage: 'https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/architectural/llumar-architectural-residential-hero.jpg',
+  megaImage: "https://images.unsplash.com/photo-1724588846681-3cf43f15c8d2",
   megaImageAlt: 'Modern architectural interior with LLumar window film installed on large glass panels'
 },
 {
@@ -46,7 +46,7 @@ const navItems: NavItem[] = [
   { label: 'Matte PPF', href: '/automotive/ppf-matte', desc: 'Satin matte protection' },
   { label: 'Coverage Options', href: '/automotive/ppf-coverage', desc: 'Partial to full-body coverage' }],
 
-  megaImage: 'https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/ppf/llumar-ppf-installation.jpg',
+  megaImage: "https://img.rocket.new/generatedImages/rocket_gen_img_1bc49c649-1772066284873.png",
   megaImageAlt: 'Professional LLumar paint protection film installation on a vehicle hood'
 },
 { label: 'About', href: '/about' },
@@ -135,14 +135,14 @@ export default function Header() {
         <nav className="flex items-center justify-between px-6 lg:px-10 py-4 max-w-[1400px] mx-auto">
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0 z-10">
+            {/* On transparent (home hero): show white/inverted logo; on solid header: show the red Kuwait logo */}
             <AppImage
-              src="https://llumarkuwait.com/wp-content/uploads/2024/09/LLumar-logo-e1727115848481.png"
+              src={isTransparent ? '/assets/images/IMG_8359-1787540282171.jpeg' : '/assets/images/IMG_8355-1787540282890.jpeg'}
               alt="LLumar Kuwait — official exclusive distributor"
               width={140}
               height={48}
-              className={`h-9 w-auto object-contain transition-all duration-500 ${logoFilter}`}
+              className="h-10 w-auto object-contain transition-all duration-500"
               priority />
-
           </Link>
 
           {/* Desktop nav */}
@@ -354,5 +354,6 @@ export default function Header() {
         </svg>
       </a>
     </>);
+
 
 }

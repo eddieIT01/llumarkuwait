@@ -7,7 +7,7 @@ const galleryItems = [
   id: 1,
   category: 'Automotive',
   title: 'Ceramic Tint Installation',
-  image: 'https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/automotive/llumar-automotive-tint-hero.jpg',
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_108242f7a-1779492497419.png",
   alt: 'LLumar ceramic window tint installed on a luxury sedan in Kuwait',
   span: 'col-span-2 row-span-2'
 },
@@ -15,7 +15,7 @@ const galleryItems = [
   id: 2,
   category: 'PPF',
   title: 'Full-Body PPF',
-  image: 'https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/ppf/llumar-ppf-installation.jpg',
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1aa13ae2e-1773778991648.png",
   alt: 'Full-body LLumar paint protection film applied to a sports car',
   span: 'col-span-1 row-span-1'
 },
@@ -23,7 +23,7 @@ const galleryItems = [
   id: 3,
   category: 'Architectural',
   title: 'Residential Installation',
-  image: 'https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/architectural/llumar-architectural-residential-hero.jpg',
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_13816b611-1787540512677.png",
   alt: 'LLumar residential window film installed in a modern Kuwait home',
   span: 'col-span-1 row-span-1'
 },
@@ -31,7 +31,7 @@ const galleryItems = [
   id: 4,
   category: 'Commercial',
   title: 'Office Solar Control',
-  image: 'https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/architectural/llumar-architectural-commercial.jpg',
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_12d8c5931-1787540513272.png",
   alt: 'LLumar commercial solar control film on office building glass facade',
   span: 'col-span-1 row-span-1'
 },
@@ -39,7 +39,7 @@ const galleryItems = [
   id: 5,
   category: 'Automotive',
   title: 'FormulaOne Tint',
-  image: 'https://llumar.com/content/dam/eastman/performance-films/llumar/imagery/automotive/llumar-formulaone.jpg',
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1386b3083-1787540513255.png",
   alt: 'FormulaOne by LLumar premium tint on a high-performance vehicle',
   span: 'col-span-1 row-span-1'
 }];
