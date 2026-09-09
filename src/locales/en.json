@@ -51,7 +51,7 @@
         "hotline": "Hotline: 1886660"
     },
     "hero": {
-        "eyebrow": "Kuwait's Exclusive LLumar Distributor Since 2000",
+        "eyebrow": "Kuwait's Exclusive LLumar Distributor Since 2001",
         "headline1": "Engineered",
         "headline2": "to Protect.",
         "subline": "Precision window film and paint protection for vehicles and architecture. Installed by Kuwait's most experienced team.",
@@ -59,25 +59,25 @@
         "cta2": "Contact LLumar Kuwait",
         "stat1Value": "25+",
         "stat1Label": "Years in Kuwait",
-        "stat2Value": "2",
-        "stat2Label": "Showrooms",
-        "stat3Value": "2000",
+        "stat2Value": "1",
+        "stat2Label": "Showroom",
+        "stat3Value": "2001",
         "stat3Label": "Established",
         "scroll": "Scroll",
-        "brandAccentAr": "\u0644\u0648\u0645\u0627\u0631 \u0627\u0644\u0643\u0648\u064a\u062a",
-        "taglineAr": "\u0645\u0635\u0645\u0651\u0645 \u0644\u0644\u062d\u0645\u0627\u064a\u0629."
+        "brandAccentAr": "لومار الكويت",
+        "taglineAr": "مصمّم للحماية."
     },
     "heritage": {
         "label": "The LLumar Difference",
         "yearsValue": "25+",
         "yearsLabel": "Years of Experience",
-        "body1": "One uncompromising standard. Since 2000, LLumar Kuwait has set the benchmark for professional film installation in the region \u2014 combining global LLumar technology with deep local expertise.",
-        "body2": "Every installation is performed by trained technicians using authentic LLumar films \u2014 the same technology trusted by professionals across 100+ countries.",
+        "body1": "One uncompromising standard. Since 2001, LLumar Kuwait has set the benchmark for professional film installation in the region — combining global LLumar technology with deep local expertise.",
+        "body2": "Every installation is performed by trained technicians using authentic LLumar films — the same technology trusted by professionals across 100+ countries.",
         "stats": [
             {
                 "value": "25+",
                 "label": "Years of Experience",
-                "detail": "Serving Kuwait since 2000"
+                "detail": "Serving Kuwait since 2001"
             },
             {
                 "value": "65+",
@@ -85,9 +85,9 @@
                 "detail": "Global film engineering expertise"
             },
             {
-                "value": "2",
-                "label": "Kuwait Showrooms",
-                "detail": "Shuwaikh & Al Rai"
+                "value": "1",
+                "label": "Kuwait Showroom",
+                "detail": "Al Shuwaikh"
             },
             {
                 "value": "#1",
@@ -307,7 +307,7 @@
     "booking": {
         "label": "Book an Appointment",
         "headline": "Start Your Installation",
-        "subline": "Select a service and branch \u2014 we'll connect you directly via WhatsApp.",
+        "subline": "Select a service — we'll connect you directly via WhatsApp.",
         "step1": "Select Service",
         "step2": "Select Branch",
         "step3": "Connect",
@@ -334,11 +334,6 @@
                 "id": "shuwaikh",
                 "name": "Shuwaikh Showroom",
                 "area": "Shuwaikh Industrial Area"
-            },
-            {
-                "id": "alrai",
-                "name": "Al Rai Showroom",
-                "area": "Al Ghazali Street, Al Rai"
             }
         ],
         "connectCta": "Connect via WhatsApp",
@@ -348,9 +343,9 @@
     },
     "contact": {
         "label": "Visit Us",
-        "headline1": "Two Locations",
-        "headline2": "Across Kuwait",
-        "hours": "8:30 AM \u2013 7:30 PM",
+        "headline1": "Our Location",
+        "headline2": "Al Shuwaikh",
+        "hours": "8:30 AM – 7:30 PM",
         "fullContact": "Full Contact Page",
         "showroomLabel": "Showroom",
         "whatsapp": "WhatsApp",
@@ -359,12 +354,12 @@
             "label": "Get In Touch",
             "headline1": "Contact",
             "headline2": "LLumar Kuwait",
-            "subline": "Two showrooms across Kuwait. Visit us, call us, or send a message \u2014 we're here to help with any enquiry.",
+            "subline": "Our showroom is in Shuwaikh. Visit us, call us, or send a message — we're here to help with any enquiry.",
             "quickLabel": "Quick Contact",
             "whatsappUs": "WhatsApp Us",
-            "showroomsLabel": "Our Showrooms",
-            "showroomsHeadline1": "Two Locations",
-            "showroomsHeadline2": "Across Kuwait",
+            "showroomsLabel": "Our Showroom",
+            "showroomsHeadline1": "One Location",
+            "showroomsHeadline2": "Al Shuwaikh",
             "formLabel": "Send a Message",
             "formHeadline": "Get in Touch",
             "formSubline": "Fill out the form and we'll respond via WhatsApp. For immediate assistance, call or WhatsApp us directly.",
@@ -388,15 +383,14 @@
         }
     },
     "footer": {
-        "tagline": "Kuwait's exclusive LLumar distributor since 2000. The standard for window film installation in Kuwait.",
+        "tagline": "Kuwait's exclusive LLumar distributor since 2001. The standard for window film installation in Kuwait.",
         "automotive": "Automotive",
         "architectural": "Architectural",
         "company": "Company",
         "contactLabel": "Contact",
         "shuwaikh": "Shuwaikh",
-        "alRai": "Al Rai",
         "hotline": "Hotline",
-        "copyright": "\u00a9 2025 LLumar Kuwait. All rights reserved. Exclusive distributor of LLumar\u00ae films in Kuwait.",
+        "copyright": "© 2025 LLumar Kuwait. All rights reserved. Exclusive distributor of LLumar® films in Kuwait.",
         "eastman": "An Eastman Performance Films brand",
         "links": {
             "automotive": [
@@ -464,13 +458,13 @@
         }
     },
     "about": {
-        "label": "Since 2000",
+        "label": "Since 2001",
         "headline1": "About",
         "headline2": "LLumar Kuwait",
         "storyLabel": "Our Story",
         "storyHeadline": "Kuwait's Standard for Window Film",
-        "storyBody1": "Since 2000, LLumar Kuwait has been the exclusive authorized distributor of LLumar\u00ae films in Kuwait. What began as a commitment to bringing world-class window film technology to the region has grown into Kuwait's most trusted name in professional film installation.",
-        "storyBody2": "We operate two fully equipped showrooms \u2014 in Shuwaikh and Al Rai \u2014 staffed by certified technicians with decades of combined experience. Every installation reflects our commitment to precision, quality and lasting performance.",
+        "storyBody1": "Since 2001, LLumar Kuwait has been the exclusive authorized distributor of LLumar® films in Kuwait. What began as a commitment to bringing world-class window film technology to the region has grown into Kuwait's most trusted name in professional film installation.",
+        "storyBody2": "We operate a fully equipped showroom in Shuwaikh — staffed by certified technicians with decades of combined experience. Every installation reflects our commitment to precision, quality and lasting performance.",
         "pillarsLabel": "Our Standards",
         "pillarsHeadline": "What Sets LLumar Kuwait Apart",
         "pillars": [

@@ -115,11 +115,11 @@ export default function Header() {
             </span>
           </div>
           <div className={`${isArabic ? 'mr-auto' : 'ml-auto'} flex items-center gap-4 ${isArabic ? 'flex-row-reverse' : ''}`}>
-            <a href="tel:+96565008585" className={`flex items-center gap-1.5 font-semibold transition-colors duration-200 ${isArabic ? 'flex-row-reverse' : ''} ${isTransparent ? 'hover:text-white' : 'hover:text-[#CC0000]'}`}>
+            <a href="tel:+96556617907" className={`flex items-center gap-1.5 font-semibold transition-colors duration-200 ${isArabic ? 'flex-row-reverse' : ''} ${isTransparent ? 'hover:text-white' : 'hover:text-[#CC0000]'}`}>
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
-              +965 6500 8585
+              +965 566 17907
             </a>
             <span className="opacity-30">|</span>
             <span>{t.topBar.hotline}</span>
@@ -238,7 +238,7 @@ export default function Header() {
           {/* CTA */}
           <div className={`hidden lg:flex items-center gap-3 ${isArabic ? 'flex-row-reverse' : ''}`}>
             <a
-              href="https://wa.me/96565008585"
+              href="https://wa.me/96556617907"
               target="_blank"
               rel="noopener noreferrer"
               className={`flex items-center gap-2 text-[11px] font-medium tracking-wider transition-colors duration-200 ${isArabic ? 'flex-row-reverse' : ''} ${isTransparent ? 'text-white/70 hover:text-white' : 'text-[#6B6560] hover:text-[#25D366]'}`}
@@ -345,7 +345,7 @@ export default function Header() {
         </div>
         <div className="px-6 py-6 border-t border-[#E0DBD5] flex flex-col gap-3">
           <a
-            href="https://wa.me/96565008585"
+            href="https://wa.me/96556617907"
             target="_blank"
             rel="noopener noreferrer"
             className={`flex items-center justify-center gap-2 py-3.5 border border-[#25D366] text-[#25D366] text-[11px] font-semibold tracking-[0.15em] uppercase ${isArabic ? 'flex-row-reverse' : ''}`}
@@ -363,7 +363,7 @@ export default function Header() {
             {t.nav.bookNow}
           </Link>
           <div className={`text-center text-[10px] text-[#9A9590] tracking-wider mt-1 ${isArabic ? 'flex-row-reverse' : ''}`}>
-            <a href="tel:+96565008585" className="hover:text-[#CC0000] transition-colors">+965 6500 8585</a>
+            <a href="tel:+96556617907" className="hover:text-[#CC0000] transition-colors">+965 566 17907</a>
             <span className="mx-2 opacity-40">·</span>
             <span>{t.topBar.hours}</span>
           </div>
@@ -372,7 +372,7 @@ export default function Header() {
 
       {/* WhatsApp floating button — refined, less dominant */}
       <a
-        href="https://wa.me/96565008585"
+        href="https://wa.me/96556617907"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-float-refined"
