@@ -66,10 +66,6 @@ export default function Footer() {
                   <p className={`text-[10px] text-white/25 tracking-wider uppercase mb-1 ${isArabic ? 'text-right tracking-normal' : ''}`}>{t?.footer?.shuwaikh}</p>
                   <a href="tel:+96556617907" className={`text-sm text-white/40 hover:text-white transition-colors duration-200 block ${isArabic ? 'text-right' : ''}`}>+965 566 17907</a>
                   <a href="tel:+96597714949" className={`text-sm text-white/40 hover:text-white transition-colors duration-200 block ${isArabic ? 'text-right' : ''}`}>+965 9771 4949</a>
-                </div>
-                <div>
-                  <p className={`text-[10px] text-white/25 tracking-wider uppercase mb-1 ${isArabic ? 'text-right tracking-normal' : ''}`}>{t?.footer?.alRai}</p>
-                  <a href="tel:+96565008585" className={`text-sm text-white/40 hover:text-white transition-colors duration-200 block ${isArabic ? 'text-right' : ''}`}>+965 6500 8585</a>
                   <a href="tel:1886660" className={`text-sm text-white/40 hover:text-white transition-colors duration-200 block ${isArabic ? 'text-right' : ''}`}>{t?.footer?.hotline}: 1886660</a>
                 </div>
                 <a href="mailto:info@llumarkuwait.com" className={`text-sm text-white/40 hover:text-[#CC0000] transition-colors duration-200 ${isArabic ? 'text-right' : ''}`}>info@llumarkuwait.com</a>

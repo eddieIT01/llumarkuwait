@@ -3,11 +3,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 
 const serviceIcons = ['🚗', '🛡️', '🏢', '🔒'];
-const branchPhones = ['+965 566 17907', '+965 6500 8585'];
-const branchWhatsapps = ['96556617907', '96565008585'];
+const branchPhones = ['+965 566 17907'];
+const branchWhatsapps = ['96556617907'];
 const branchMaps = [
   'https://maps.app.goo.gl/V4aDScBpW8dYkC8H8',
-  'https://maps.app.goo.gl/VV6JvW3YLXCe8TGT6',
 ];
 
 export default function BookingFlowSection() {
@@ -45,7 +44,7 @@ export default function BookingFlowSection() {
     const msg = encodeURIComponent(
       t?.booking?.waMessage?.replace('{service}', selectedServiceData?.label || '')?.replace('{branch}', selectedBranchData?.name || '')
     );
-    const wa = selectedBranchData?.whatsapp || '96565008585';
+    const wa = selectedBranchData?.whatsapp || '96556617907';
     window.open(`https://wa.me/${wa}?text=${msg}`, '_blank');
   };
 

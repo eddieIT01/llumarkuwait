@@ -13,15 +13,6 @@ const contactItems = [
     whatsapp: '96556617907',
     maps: 'https://maps.app.goo.gl/V4aDScBpW8dYkC8H8',
   },
-  {
-    id: 'alrai',
-    labelKey: 'alRai' as const,
-    detail: 'Al Ghazali Street, Al Rai',
-    detailAr: 'شارع الغزالي، الري',
-    phone: '+965 6500 8585',
-    whatsapp: '96565008585',
-    maps: 'https://maps.app.goo.gl/VV6JvW3YLXCe8TGT6',
-  },
 ];
 
 export default function ContactSection() {
@@ -43,7 +34,6 @@ export default function ContactSection() {
 
   const showroomLabels: Record<string, string> = {
     shuwaikh: isArabic ? 'معرض الشويخ' : 'Shuwaikh Showroom',
-    alRai: isArabic ? 'معرض الري' : 'Al Rai Showroom',
   };
 
   return (

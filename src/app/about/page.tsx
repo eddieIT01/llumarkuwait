@@ -11,14 +11,14 @@ export default function AboutPage() {
   const at = t?.about;
 
   const stats = isArabic ? [
-    { value: '+٢٥', label: 'عاماً من الخبرة', detail: 'في الكويت منذ عام ٢٠٠٠' },
-    { value: '٢٠٠٠', label: 'تأسست عام', detail: 'الموزع الحصري' },
-    { value: '٢', label: 'معرضان في الكويت', detail: 'الشويخ والري' },
+    { value: '+٢٥', label: 'عاماً من الخبرة', detail: 'في الكويت منذ عام ٢٠٠١' },
+    { value: '٢٠٠١', label: 'تأسست عام', detail: 'الموزع الحصري' },
+    { value: '١', label: 'معرض في الكويت', detail: 'الشويخ' },
     { value: '#١', label: 'مركب أفلام', detail: 'في الكويت' },
   ] : [
-    { value: '25+', label: 'Years of Experience', detail: 'In Kuwait since 2000' },
-    { value: '2000', label: 'Established', detail: 'Exclusive distributor' },
-    { value: '2', label: 'Kuwait Showrooms', detail: 'Shuwaikh & Al Rai' },
+    { value: '25+', label: 'Years of Experience', detail: 'In Kuwait since 2001' },
+    { value: '2001', label: 'Established', detail: 'Exclusive distributor' },
+    { value: '1', label: 'Kuwait Showroom', detail: 'Al Shuwaikh' },
     { value: '#1', label: 'Film Installer', detail: 'In Kuwait' },
   ];
 
